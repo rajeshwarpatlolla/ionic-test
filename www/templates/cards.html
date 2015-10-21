@@ -1,0 +1,49 @@
+<ion-view view-title="Cards" class="cards_view">
+  <ion-content class="cards_content">
+    <div class="padding-horizontal padding-top">
+      <button class="button button-block margin_zero">Add New Card</button>
+    </div>
+
+    <div class="padding-horizontal font_14px padding-top">Default Card</div>
+    <div class="list card margin_top_5px">
+      <div class="item item-body row">
+        <div class="col col-25">
+          <img src="img/credit_card.png" alt="" class="full-image max_width_100px"/>
+        </div>
+        <div class="col col-75">
+          <div class="font_14px">XXXX XXXX XXXX 1234</div>
+          <div class="font_12px">Expires on : Nov 2018</div>
+        </div>
+      </div>
+      <div class="item tabs tabs-secondary tabs-icon-left">
+        <div class="tab-item" ng-click="">
+          <i class="ion-edit"></i>&nbsp; Edit
+        </div>
+        <div class="tab-item" ng-click="">
+          <i class="ion-ios-close-outline"></i>&nbsp; Remove
+        </div>
+      </div>
+    </div>
+
+    <div class="padding-horizontal font_14px padding-top">Other Cards</div>
+    <div class="list card margin_top_5px" ng-repeat="i in [1,2]">
+      <div class="item item-body row">
+        <div class="col col-25">
+          <img src="img/credit_card.png" alt="" class="full-image max_width_100px"/>
+        </div>
+        <div class="col col-75">
+          <div class="font_14px">XXXX XXXX XXXX 1234</div>
+          <div class="font_12px">Expires on : Nov 2018</div>
+        </div>
+      </div>
+      <div class="item tabs tabs-secondary tabs-icon-left">
+        <div class="tab-item" ng-click="">
+          <i class="ion-edit"></i>&nbsp; Edit
+        </div>
+        <div class="tab-item" ng-click="">
+          <i class="ion-ios-close-outline"></i>&nbsp; Remove
+        </div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>
