@@ -1,5 +1,25 @@
 <ion-view view-title="Settings" class="settings_view">
   <ion-content class="settings_content">
 
+    <div class="list padding margin_zero">
+      <div class="item item-input">
+        <input type="text" placeholder="First Name" ng-model="settings.fname"/>
+      </div>
+      <div class="item item-input">
+        <input type="text" placeholder="Last Name" ng-model="settings.lname"/>
+      </div>
+      <div class="item item-input">
+        <input type="email" placeholder="Email" ng-model="settings.email"/>
+      </div>
+    </div>
+    <div class="list padding margin_zero">
+      <div class="item item-input">
+        <input type="password" placeholder="Password" ng-model="settings.password"/>
+      </div>
+    </div>
+    <div class="list padding margin_zero">
+      <button class="button button-block button-default">Update Profile</button>
+    </div>
+
   </ion-content>
 </ion-view>

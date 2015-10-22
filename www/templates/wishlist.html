@@ -1,5 +1,28 @@
-<ion-view>
-  <ion-content>
-    <h4>Wishlist</h4>
+<ion-view view-title="Wishlist" class="wishlist_view">
+  <ion-content class="wishlist_content">
+    <div class="list card margin_top_5px" ng-repeat="i in [1,2,3,4,5]">
+      <div class="item item-body padding">
+        <div class="row padding_zero">
+          <div class="col col-25">
+            <img src="img/iPhone_6.png" class="full-image">
+          </div>
+          <div class="col col-75">
+            <h2 class="margin_tb_5px">Apple iPhone 6</h2>
+
+            <div class="font_12px white_space_normal">Color : Black</div>
+            <div class="font_12px white_space_normal">Size : 32 GB</div>
+            <div class="font_12px white_space_normal">Quantity : 1</div>
+          </div>
+        </div>
+      </div>
+      <div class="item tabs tabs-secondary tabs-icon-left">
+        <div class="tab-item" ng-click="">
+          <i class="ion-ios-cart-outline"></i>&nbsp; Move to cart
+        </div>
+        <div class="tab-item" ng-click="">
+          <i class="ion-ios-close-outline"></i>&nbsp; Remove
+        </div>
+      </div>
+    </div>
   </ion-content>
 </ion-view>
