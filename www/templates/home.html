@@ -24,14 +24,6 @@
 <ion-view view-title="Golf fit case" class="product_details_page">
 
   <ion-content class="content">
-    <ion-slide-box on-slide-changed="imageDetailsSlideHasChanged($index)" delegate-handle="product_img_slidebox_dh"
-                   show-pager="{{productDetails.images.length > 1}}" class="details_slide_box">
-      <ion-slide class="image_details_slide" ng-repeat="productDetail in productDetails.images"
-                 ng-click="openImageDetailsModal(productDetail.img)">
-        <img ng-src="{{productDetail.img}}" alt="" class="detail_image full-image"/>
-      </ion-slide>
-    </ion-slide-box>
-
     <div class="list padding-top">
       <div class="item border_top_none">
         <div class="product_heading font_aller_Regular font_24px text-center">Golf fit case</div>
