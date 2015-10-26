@@ -1,0 +1,91 @@
+<!--
+<ion-view view-title="Home">
+  <ion-content>
+
+    &lt;!&ndash;<ion-scroll direction="x" style="width: 100%;" class="padding-top"
+                delegate-handle="products_scroll_delegate" horizontal-scroll-fix="mainScroll">
+      <div class="display_inline_box" ng-repeat="i in [1,2,3,4,5]">
+        <img src="img/iPhone_6.png" alt="" class="full-image" style="width: 50px;"/>
+      </div>
+    </ion-scroll>&ndash;&gt;
+
+    <ion-scroll direction="x" style="width: 100%; height: 50px" class="padding-top"
+                delegate-handle="quantity_scroll_delegate" horizontal-scroll-fix="mainScroll">
+      <div ng-repeat="quantity in [1,2,3,4,5,6,7,8,9,10]" style="display: inline-block" >
+        <div class="quantity_circle" ng-bind="quantity"></div>
+      </div>
+    </ion-scroll>
+
+  </ion-content>
+</ion-view>
+-->
+
+
+<ion-view view-title="Golf fit case" class="product_details_page">
+
+  <ion-content class="content">
+    <div class="list padding-top">
+      <div class="item border_top_none">
+        <div class="product_heading font_aller_Regular font_24px text-center">Golf fit case</div>
+        <div class="font_aller_Regular font_16px padding-top text-center">&#8377; 1950</div>
+      </div>
+
+      <div class="item padding-top quantity_section padding_lr_zero">
+        <div class="text-center uppercase font_aller_bold font_12px">quantity</div>
+        <ion-scroll direction="x" style="width: 100%; height: 50px" class="padding-top"
+                    delegate-handle="quantity_scroll_delegate" horizontal-scroll-fix="mainScroll">
+          <div ng-repeat="quantity in [1,2,3,4,5,6,7,8,9,10]" style="display: inline-block"
+               ng-click="quantitySelected(quantity)">
+            <div class="quantity_circle" ng-bind="quantity"
+                 ng-class="{'selected_quantity':(selectedQuantity === quantity)}"></div>
+          </div>
+        </ion-scroll>
+        <!--<span ng-click="moveLeftForQuantity()"><i class="icon ion-chevron-left quantity_left_arrow"></i></span>-->
+        <!--<span ng-click="moveRightForQuantity()"><i class="icon ion-chevron-right quantity_right_arrow"></i></span>-->
+      </div>
+
+      <div class="item share_section padding_lr_zero">
+        <div class="text-center uppercase font_aller_bold font_12px">share with friends on</div>
+        <ion-scroll direction="x" style="width: 100%; height: 50px" class="padding-top"
+                    delegate-handle="share_scroll_delegate" horizontal-scroll-fix="mainScroll">
+          <div class="social_icons">
+            <div class="social_share_circle"><i class="icon ion-social-facebook"></i></div>
+            <div class="social_share_circle"><i class="icon ion-social-twitter"></i></div>
+            <div class="social_share_circle"><i class="icon ion-social-whatsapp"></i></div>
+            <div class="social_share_circle"><i class="icon ion-social-instagram"></i></div>
+            <div class="social_share_circle"><i class="icon ion-ios-chatbubble"></i></div>
+            <div class="social_share_circle"><i class="icon ion-email"></i></div>
+          </div>
+        </ion-scroll>
+      </div>
+      <div>
+        <!--<div class="description_heading item" ng-click="toggleDescription()">-->
+        <div class="description_heading item">
+          <div class="uppercase font_aller_bold font_14px text-center">Description</div>
+        </div>
+      </div>
+      <div class="description item white_space_normal font_aller_Regular font_14px color_88"
+           ng-show="showDescription">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur dolor dolores earum enim expedita
+        facilis,
+        illo iusto labore maiores, necessitatibus numquam quae, quam quidem ratione rem repellat tempore vel.
+        Molestiae!
+      </div>
+
+      <div class="item text-center">
+        <div class="chat_with_us_icon_btn">
+          <i class="icon ion-ios-chatbubble-outline font_28px" style="position: relative;top:4px;"></i>&nbsp;
+          <span class="uppercase font_aller_bold font_14px">chat with us</span>
+        </div>
+      </div>
+    </div>
+
+  </ion-content>
+
+  <ion-footer-bar class="text-center details_page_footer">
+    <div class="width_100p">
+      <button class="button button-positive button-block uppercase text-center font_aller_bold margin_zero">add to cart
+      </button>
+    </div>
+  </ion-footer-bar>
+</ion-view>
