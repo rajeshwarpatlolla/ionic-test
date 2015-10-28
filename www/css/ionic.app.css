@@ -9462,6 +9462,14 @@ a.button {
     height: 40px;
     font-size: 14px; }
 
+ion-scroll {
+  width: 100%;
+  font-size: 40px;
+  height: auto;
+  white-space: nowrap;
+  padding: 10px;
+  line-height: 40px; }
+
 .padding_zero {
   padding: 0; }
 

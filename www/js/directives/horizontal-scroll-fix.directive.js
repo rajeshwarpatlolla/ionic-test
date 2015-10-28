@@ -4,11 +4,11 @@ angular.module('starter.directives')
 function horizontalScrollFix($timeout, $ionicScrollDelegate) {
   return {
     restrict: 'A',
-    link: function (scope, element, attrs) {
+    link: function(scope, element, attrs) {
       var mainScrollID = attrs.horizontalScrollFix,
         scrollID = attrs.delegateHandle;
 
-      var getEventTouches = function (e) {
+      var getEventTouches = function(e) {
         return e.touches && (e.touches.length ? e.touches : [
             {
               pageX: e.pageX,
@@ -17,14 +17,14 @@ function horizontalScrollFix($timeout, $ionicScrollDelegate) {
           ]);
       };
 
-      var fixHorizontalAndVerticalScroll = function () {
+      var fixHorizontalAndVerticalScroll = function() {
         var mainScroll, scroll;
         mainScroll = $ionicScrollDelegate.$getByHandle(mainScrollID).getScrollView();
         scroll = $ionicScrollDelegate.$getByHandle(scrollID).getScrollView();
 
         // patch touchstart
         scroll.__container.removeEventListener('touchstart', scroll.touchStart);
-        scroll.touchStart = function (e) {
+        scroll.touchStart = function(e) {
           var startY;
           scroll.startCoordinates = ionic.tap.pointerCoord(e);
           if (ionic.tap.ignoreScrollStart(e)) {
@@ -45,7 +45,7 @@ function horizontalScrollFix($timeout, $ionicScrollDelegate) {
           // e.preventDefault();
 
           // lock main scroll if scrolling horizontal
-          $timeout((function () {
+          $timeout((function() {
             var animate, yMovement;
             yMovement = startY - mainScroll.__scrollTop;
             if (scroll.__isDragging && yMovement < 2.0 && yMovement > -2.0) {
@@ -60,9 +60,7 @@ function horizontalScrollFix($timeout, $ionicScrollDelegate) {
         };
         scroll.__container.addEventListener('touchstart', scroll.touchStart);
       };
-      $timeout(function () {
-        fixHorizontalAndVerticalScroll();
-      });
+      $timeout(function() { fixHorizontalAndVerticalScroll(); });
     }
   };
 }

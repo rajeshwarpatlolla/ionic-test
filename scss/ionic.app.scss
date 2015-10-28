@@ -285,7 +285,14 @@ $px10: 10px;
     }
   }
 }
-
+ion-scroll {
+  width: 100%;
+  font-size: 40px;
+  height: auto;
+  white-space: nowrap;
+  padding: 10px;
+  line-height: 40px;
+}
 
 //============================================================================================================
 //Common CSS
