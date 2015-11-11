@@ -9082,6 +9082,8 @@ a.button {
   height: 180px;
   width: 100%;
   padding-top: 10px; }
+  .home_view .home_content .scroll_area ion-scroll div div {
+    display: inline-block; }
   .home_view .home_content .scroll_area .scroll_section {
     overflow-x: auto;
     overflow-y: hidden;

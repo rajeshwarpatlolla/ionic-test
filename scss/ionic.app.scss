@@ -45,13 +45,20 @@ $px10: 10px;
       height: 180px;
       width: 100%;
       padding-top: 10px;
+      ion-scroll {
+        div {
+          div {
+            display: inline-block;
+          }
+        }
+      }
       .scroll_section {
         overflow-x: auto;
         overflow-y: hidden;
         white-space: nowrap;
         div {
           display: inline-block;
-          img{
+          img {
             padding-left: 5px;
             padding-right: 5px;
             width: 100%;
