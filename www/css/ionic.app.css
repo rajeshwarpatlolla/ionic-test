@@ -9078,6 +9078,10 @@ a.button {
   background-attachment: fixed !important;
   background-size: cover !important; }
 
+.side_menu ion-item {
+  font-size: 14px;
+  padding-left: 10px; }
+
 .home_view .home_content .scroll_area {
   height: 180px;
   width: 100%;
