@@ -121,7 +121,7 @@ angular.module('starter', [
         views: {
           'tab-account': {
             templateUrl: 'templates/orders.html',
-            controller: 'AccountCtrl'
+            controller: 'OrdersCtrl'
           }
         }
       })

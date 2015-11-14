@@ -40,7 +40,7 @@ $px10: 10px;
 }
 
 .side_menu {
-  ion-item{
+  ion-item {
     font-size: 14px;
     padding-left: 10px;
   }
@@ -192,6 +192,21 @@ $px10: 10px;
 
 .orders_view {
   .orders_content {
+    .order_tabs {
+      padding: 0;
+      background-color: #ffffff;
+      color: #000;
+      .order_tab {
+        padding: 10px;
+      }
+      .order_tab:first-child {
+        border-right: 1px solid #aaaaaa;
+      }
+      .active {
+        font-weight: bold;
+        border-bottom: 2px solid $royal;
+      }
+    }
     .list:nth-child(n+1) {
       padding-bottom: 0;
     }

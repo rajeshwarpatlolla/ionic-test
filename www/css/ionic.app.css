@@ -9179,6 +9179,17 @@ a.button {
 
 .orders_view .orders_content {
   background-color: #eeeeee; }
+  .orders_view .orders_content .order_tabs {
+    padding: 0;
+    background-color: #ffffff;
+    color: #000; }
+    .orders_view .orders_content .order_tabs .order_tab {
+      padding: 10px; }
+    .orders_view .orders_content .order_tabs .order_tab:first-child {
+      border-right: 1px solid #aaaaaa; }
+    .orders_view .orders_content .order_tabs .active {
+      font-weight: bold;
+      border-bottom: 2px solid #886aea; }
   .orders_view .orders_content .list:nth-child(n+1) {
     padding-bottom: 0; }
   .orders_view .orders_content .item {
