@@ -152,6 +152,15 @@ angular.module('starter', [
           }
         }
       })
+      .state('app.tabs.wallet', {
+        url: '/wallet',
+        views: {
+          'tab-account': {
+            templateUrl: 'templates/wallet.html',
+            controller: 'AccountCtrl'
+          }
+        }
+      })
       .state('app.tabs.settings', {
         url: '/settings',
         views: {

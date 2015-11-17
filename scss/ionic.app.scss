@@ -229,8 +229,14 @@ $px10: 10px;
   }
 }
 
-.addresses_view, .cards_view, .coupons_view, .cart_view, .wishlist_view {
-  .addresses_content, .cards_content, .coupons_content, .cart_content, .wishlist_content {
+.wallet_view {
+  .wallet_content {
+
+  }
+}
+
+.addresses_view, .cards_view, .coupons_view, .cart_view, .wishlist_view, .wallet_view {
+  .addresses_content, .cards_content, .coupons_content, .cart_content, .wishlist_content, .wallet_content {
     background-color: $page_bg_color;
     .card {
       border-top-right-radius: 4px;
