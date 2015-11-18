@@ -9082,6 +9082,9 @@ a.button {
   font-size: 14px;
   padding-left: 10px; }
 
+.tab-item-active {
+  color: #ffffff !important; }
+
 .home_view .home_content .type_heading {
   font-size: 16px;
   border-bottom: 1px solid #eeeeee;
