@@ -9500,6 +9500,12 @@ ion-scroll {
   border-right: none;
   border-bottom: none; }
 
+.border_right_ccc {
+  border-right: 1px solid #ccc; }
+
+.border_bottom_ccc {
+  border-bottom: 1px solid #ccc; }
+
 .uppercase {
   text-transform: uppercase; }
 
