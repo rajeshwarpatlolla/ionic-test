@@ -1,6 +1,6 @@
 {
   "name": "theme-sc",
-  "app_id": "",
+  "app_id": "16a224e3",
   "gulpStartupTasks": [
     "sass",
     "watch"

@@ -6,7 +6,6 @@
 // 'starter.controllers' is found in controllers.js
 angular.module('starter', [
   'ionic',
-  'ngIOS9UIWebViewPatch',
   'starter.controllers',
   'starter.constants',
   'starter.directives',
