@@ -5,6 +5,7 @@ function ScrollService() {
   this.handleScroll = function (sv) {
     try {
       var container = sv.__container;
+
       var originaltouchStart = sv.touchStart;
       var originalmouseDown = sv.mouseDown;
       var originaltouchMove = sv.touchMove;
@@ -15,44 +16,25 @@ function ScrollService() {
       document.removeEventListener('touchmove', sv.touchMove);
       document.removeEventListener('mousemove', sv.mousemove);
 
-      sv.touchStart = function (e) {
-        e.preventDefault = function () {
-        };
-        try {
-          originaltouchStart.apply(sv, [e]);
-        } catch (e) {
-          console.log('Error in scroll directive : touchStart.');
-        }
+
+      sv.touchStart = function(e) {
+        e.preventDefault = function(){};
+        originaltouchStart.apply(sv, [e]);
       };
 
-      sv.touchMove = function (e) {
-        e.preventDefault = function () {
-        };
-        try {
-          originaltouchMove.apply(sv, [e]);
-        } catch (e) {
-          console.log('Error in scroll directive : touchMove.');
-        }
+      sv.touchMove = function(e) {
+        e.preventDefault = function(){};
+        originaltouchMove.apply(sv, [e]);
       };
 
-      sv.mouseDown = function (e) {
-        e.preventDefault = function () {
-        };
-        try {
-          originalmouseDown.apply(sv, [e]);
-        } catch (e) {
-          console.log('Error in scroll directive : mouseDown.');
-        }
+      sv.mouseDown = function(e) {
+        e.preventDefault = function(){};
+        originalmouseDown.apply(sv, [e]);
       };
 
-      sv.mouseMove = function (e) {
-        e.preventDefault = function () {
-        };
-        try {
-          originalmouseMove.apply(sv, [e]);
-        } catch (e) {
-          console.log('Error in scroll directive : mouseMove.');
-        }
+      sv.mouseMove = function(e) {
+        e.preventDefault = function(){};
+        originalmouseMove.apply(sv, [e]);
       };
 
       container.addEventListener("touchstart", sv.touchStart, false);

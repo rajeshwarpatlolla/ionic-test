@@ -45,9 +45,11 @@ $px10: 10px;
     padding-left: 10px;
   }
 }
-.tab-item-active{
+
+.tab-item-active {
   color: #ffffff !important;
 }
+
 .home_view {
   .home_content {
     .type_heading {
@@ -60,12 +62,8 @@ $px10: 10px;
       height: 180px;
       width: 100%;
       padding-top: 10px;
-      ion-scroll {
-        div {
-          div {
-            display: inline-block;
-          }
-        }
+      div {
+        display: inline-block;
       }
       .scroll_section {
         overflow-x: auto;
@@ -226,7 +224,7 @@ $px10: 10px;
       border-top-left-radius: 4px;
       border-top-right-radius: 4px;
     }
-    .br_bottom_4px{
+    .br_bottom_4px {
       border-bottom-left-radius: 4px;
       border-bottom-right-radius: 4px;
     }
@@ -628,12 +626,15 @@ ion-scroll {
   border-right: none;
   border-bottom: none;
 }
+
 .border_right_ccc {
   border-right: 1px solid #ccc;
 }
+
 .border_bottom_ccc {
   border-bottom: 1px solid #ccc;
 }
+
 .uppercase {
   text-transform: uppercase;
 }
