@@ -9092,18 +9092,32 @@ a.button {
 .tab-item-active {
   color: #ffffff !important; }
 
+.home_view .home_content ion-slide img {
+  height: 150px;
+  width: 100%; }
+
 .home_view .home_content .type_heading {
   font-size: 16px;
   border-bottom: 1px solid #eeeeee;
   padding-top: 10px;
   padding-bottom: 10px; }
 
+.home_view .home_content ion-scroll {
+  padding: 10px 0; }
+
 .home_view .home_content .scroll_area {
-  height: 180px;
-  width: 100%;
-  padding-top: 10px; }
+  height: 125px;
+  width: 100%; }
   .home_view .home_content .scroll_area div {
     display: inline-block; }
+    .home_view .home_content .scroll_area div img {
+      width: 100%;
+      max-width: 100px;
+      height: 100%;
+      max-height: 130px;
+      min-height: 120px;
+      margin: auto 5px;
+      box-shadow: 0 0 5px 0px #ddd; }
   .home_view .home_content .scroll_area .scroll_section {
     overflow-x: auto;
     overflow-y: hidden;
@@ -9182,7 +9196,8 @@ a.button {
     .account_view .account_content .profile_image_section img {
       width: 80px;
       height: 80px;
-      border-radius: 50%; }
+      border-radius: 50%;
+      border: 2px solid #fff; }
   .account_view .account_content .list .item {
     padding: 12px;
     font-size: 14px; }

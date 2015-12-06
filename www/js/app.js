@@ -6,6 +6,7 @@
 // 'starter.controllers' is found in controllers.js
 angular.module('starter', [
   'ionic',
+  'ngResource',
   'starter.controllers',
   'starter.constants',
   'starter.directives',
@@ -165,7 +166,7 @@ angular.module('starter', [
         views: {
           'tab-account': {
             templateUrl: 'templates/settings.html',
-            controller: 'AccountCtrl'
+            controller: 'SettingsCtrl'
           }
         }
       })
