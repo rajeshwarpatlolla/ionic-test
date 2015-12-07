@@ -9100,7 +9100,8 @@ a.button {
   font-size: 16px;
   border-bottom: 1px solid #eeeeee;
   padding-top: 10px;
-  padding-bottom: 10px; }
+  padding-bottom: 10px;
+  text-shadow: 1px 1px 5px #888; }
 
 .home_view .home_content ion-scroll {
   padding: 10px 0; }
@@ -9190,14 +9191,17 @@ a.button {
   .account_view .account_content .list:nth-child(n+1) {
     padding-bottom: 0; }
   .account_view .account_content .profile_image_section {
-    height: 100px;
+    height: 95px;
     text-align: center;
     padding-top: 10px; }
-    .account_view .account_content .profile_image_section img {
+    .account_view .account_content .profile_image_section .icon {
+      font-size: 70px;
+      color: #555;
       width: 80px;
-      height: 80px;
       border-radius: 50%;
-      border: 2px solid #fff; }
+      border: 1px solid #555555;
+      display: inline-block;
+      padding: 5px; }
   .account_view .account_content .list .item {
     padding: 12px;
     font-size: 14px; }

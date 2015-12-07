@@ -64,6 +64,7 @@ $px10: 10px;
       border-bottom: 1px solid #eeeeee;
       padding-top: 10px;
       padding-bottom: 10px;
+      text-shadow: 1px 1px 5px #888;
     }
     ion-scroll {
       padding: 10px 0;
@@ -188,14 +189,17 @@ $px10: 10px;
     }
 
     .profile_image_section {
-      height: 100px;
+      height: 95px;
       text-align: center;
       padding-top: 10px;
-      img {
+      .icon{
+        font-size: 70px;
+        color: #555;
         width: 80px;
-        height: 80px;
         border-radius: 50%;
-        border: 2px solid #fff;
+        border: 1px solid #555555;
+        display: inline-block;
+        padding: 5px;
       }
     }
     .list {
