@@ -2,9 +2,10 @@
   angular.module('starter.controllers')
     .controller('HomeCtrl', HomeCtrl);
 
-  function HomeCtrl($scope, $timeout, $ionicScrollDelegate, ScrollService, ApiFactory) {
+  function HomeCtrl($scope, $timeout, $ionicScrollDelegate,ScrollService, ApiFactory) {
 
     $timeout(function () {
+      return false;
       var sv1 = $ionicScrollDelegate.$getByHandle('horizontal1').getScrollView();
       ScrollService.handleScroll(sv1);
       var sv2 = $ionicScrollDelegate.$getByHandle('horizontal2').getScrollView();
