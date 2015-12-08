@@ -68,6 +68,8 @@ $px10: 10px;
     }
     ion-scroll {
       padding: 10px 0;
+      border-bottom: 1px solid #ccc;
+      border-top: 1px solid #eee;
     }
     .scroll_area {
       height: 125px;

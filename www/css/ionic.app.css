@@ -9104,7 +9104,9 @@ a.button {
   text-shadow: 1px 1px 5px #888; }
 
 .home_view .home_content ion-scroll {
-  padding: 10px 0; }
+  padding: 10px 0;
+  border-bottom: 1px solid #ccc;
+  border-top: 1px solid #eee; }
 
 .home_view .home_content .scroll_area {
   height: 125px;
