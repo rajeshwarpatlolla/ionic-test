@@ -87,6 +87,15 @@ angular.module('starter', [
           }
         }
       })
+      .state('app.tabs.products', {
+        url: '/products',
+        views: {
+          'tab-home': {
+            templateUrl: 'templates/products.html',
+            controller: 'ProductsController'
+          }
+        }
+      })
 
       .state('app.tabs.wishlist', {
         url: '/wishlist',

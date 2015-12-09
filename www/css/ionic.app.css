@@ -9133,6 +9133,9 @@ a.button {
         width: 100%;
         height: 120px; }
 
+.products_view .height_40px {
+  height: 35px; }
+
 .intro_view .intro_content ion-slide {
   height: 100vh; }
   .intro_view .intro_content ion-slide img {
@@ -9530,6 +9533,9 @@ ion-scroll {
 
 .border_right_ccc {
   border-right: 1px solid #ccc; }
+
+.border_left_ccc {
+  border-left: 1px solid #ccc; }
 
 .border_bottom_ccc {
   border-bottom: 1px solid #ccc; }

@@ -2,7 +2,7 @@
   angular.module('starter.controllers')
     .controller('HomeCtrl', HomeCtrl);
 
-  function HomeCtrl($scope, $timeout, $ionicScrollDelegate,ScrollService, ApiFactory) {
+  function HomeCtrl($scope, $state, $timeout, $ionicScrollDelegate, ScrollService, ApiFactory) {
 
     $timeout(function () {
       return false;
@@ -30,6 +30,10 @@
     }
 
     getAllProducts();
+
+    $scope.changeState = function (toState) {
+      $state.go(toState);
+    };
 
   }
 

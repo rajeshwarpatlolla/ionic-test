@@ -104,6 +104,15 @@ $px10: 10px;
   }
 }
 
+.products_view {
+  .height_40px {
+    height: 35px;
+  }
+  .products_content {
+
+  }
+}
+
 .intro_view {
   .intro_content {
     ion-slide {
@@ -655,7 +664,9 @@ ion-scroll {
 .border_right_ccc {
   border-right: 1px solid #ccc;
 }
-
+.border_left_ccc{
+  border-left: 1px solid #ccc;
+}
 .border_bottom_ccc {
   border-bottom: 1px solid #ccc;
 }
