@@ -35,7 +35,8 @@ angular.module('starter', [
 
       .state('intro', {
         url: '/intro',
-        templateUrl: 'templates/intro.html'
+        templateUrl: 'templates/intro.html',
+        controller: 'IntroController'
       })
       .state('login', {
         url: '/login',

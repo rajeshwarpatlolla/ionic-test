@@ -9079,7 +9079,7 @@ a.button {
   -webkit-transition-duration: 0s;
   transition-duration: 0s; }
 
-.bg_full, .intro_view .intro_content .slide, .login_view .login_content, .login_view .reset_pwd_content, .login_view .signup_content, .reset_pwd_view .login_content, .reset_pwd_view .reset_pwd_content, .reset_pwd_view .signup_content, .signup_view .login_content, .signup_view .reset_pwd_content, .signup_view .signup_content {
+.bg_full, .login_view .login_content, .login_view .reset_pwd_content, .login_view .signup_content, .reset_pwd_view .login_content, .reset_pwd_view .reset_pwd_content, .reset_pwd_view .signup_content, .signup_view .login_content, .signup_view .reset_pwd_content, .signup_view .signup_content {
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed !important;
@@ -9139,6 +9139,9 @@ a.button {
 .products_view .height_40px {
   height: 35px; }
 
+.products_view .bar-subheader {
+  border-bottom: 1px solid #dddddd; }
+
 .sort_list .item-radio {
   border-right: none;
   border-left: none; }
@@ -9153,13 +9156,12 @@ a.button {
 .sort_list .radio-icon {
   padding: 5px; }
 
-.filter_modal_view ion-footer-bar {
-  height: 35px; }
+.filter_modal_view ion-footer-bar .button {
+  line-height: 44px !important; }
 
 .filter_modal_view .filters ion-scroll {
   width: 100%;
   height: 85vh;
-  padding: 0;
   background-color: #555;
   color: #ffffff; }
 
@@ -9181,29 +9183,14 @@ a.button {
     height: 100%; }
   .intro_view .intro_content ion-slide .slide_content {
     text-align: center;
-    padding-top: 200px; }
+    padding-top: 220px; }
     .intro_view .intro_content ion-slide .slide_content h3 {
-      color: #ffffff;
+      color: #000;
       font-size: 24px;
       font-weight: bold; }
     .intro_view .intro_content ion-slide .slide_content p {
-      color: #ffffff;
+      color: #000;
       font-size: 18px; }
-
-.intro_view .intro_content .slide {
-  background-color: #222; }
-
-.intro_view .intro_content .slide_1 {
-  background: linear-gradient(rgba(100, 100, 100, 0.2), rgba(255, 255, 255, 0.1)), url("../img/slider-1.jpg"); }
-
-.intro_view .intro_content .slide_2 {
-  background: linear-gradient(rgba(100, 100, 100, 0.2), rgba(255, 255, 255, 0.1)), url("../img/slider-2.jpg"); }
-
-.intro_view .intro_content .slide_3 {
-  background: linear-gradient(rgba(100, 100, 100, 0.2), rgba(255, 255, 255, 0.1)), url("../img/slider-3.jpg"); }
-
-.intro_view .intro_content .slide_4 {
-  background: linear-gradient(rgba(100, 100, 100, 0.2), rgba(255, 255, 255, 0.1)), url("../img/slider-4.png"); }
 
 .intro_view .intro_content .start_btn {
   position: absolute;
