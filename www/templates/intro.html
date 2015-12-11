@@ -7,10 +7,8 @@
 
           <p>This is slide {{$index + 1}}</p>
         </div>
-        <div ng-if="($index + 1) == slides.length">
-          <div class="padding start_btn">
-            <button class="button button-block button-positive" ui-sref="login">Get Started</button>
-          </div>
+        <div class="start_btn" ng-if="($index + 1) == slides.length">
+          <button class="button button-block button-positive" ui-sref="login">Get Started</button>
         </div>
       </ion-slide>
 

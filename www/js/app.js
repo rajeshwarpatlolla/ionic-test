@@ -167,7 +167,7 @@ angular.module('starter', [
         views: {
           'tab-account': {
             templateUrl: 'templates/wallet.html',
-            controller: 'AccountCtrl'
+            controller: 'WalletCtrl'
           }
         }
       })
