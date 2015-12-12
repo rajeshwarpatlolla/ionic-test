@@ -14,6 +14,7 @@
         .getProductsDataFact()
         .then(function (response) {
           $scope.allProducts = response;
+          ProductService.setAllProducts(response);
         }, function (error) {
           console.log(error);
         })

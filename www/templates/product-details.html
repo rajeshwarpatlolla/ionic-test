@@ -8,7 +8,7 @@
       </ion-slide>
     </ion-slide-box>
 
-    <div class="list">
+    <div class="list margin_zero">
       <div class="item text-center padding">
         <div>{{productDetails.name}}</div>
         <div class="row font_14px">
@@ -36,7 +36,7 @@
       </div>
 
       <div class="item padding description">
-        <div class="font_bold">Specification</div>
+        <div class="font_bold padding_tb_5px">Specification</div>
         <div class="row">
           <div class="col-34">Processor</div>
           <div class="col-66">{{productDetails.processor}} {{productDetails.processor_make}}</div>
@@ -80,6 +80,23 @@
       </div>
     </div>
 
+    <div class="item padding may_like">
+      <div class="font_bold padding_tb_5px">You may also like</div>
+      <div ng-repeat="product in alsoPurchasedProducts track by $index">
+        <div class="row text-center" ng-if="$even">
+          <div class="col-50">
+            <div><img ng-src="{{product.images[0].src}}" alt="" class="full-image"/></div>
+            <div class="font_14px">{{product.name}}</div>
+            <div class="font_12px">{{product.price | currency : product.currency}}</div>
+          </div>
+          <div class="col-50">
+            <div><img ng-src="{{product.images[0].src}}" alt="" class="full-image"/></div>
+            <div class="font_14px">{{product.name}}</div>
+            <div class="font_12px">{{product.price | currency : product.currency}}</div>
+          </div>
+        </div>
+      </div>
+    </div>
   </ion-content>
 
   <ion-footer-bar class="text-center padding_zero">

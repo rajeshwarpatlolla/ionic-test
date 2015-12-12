@@ -19,6 +19,19 @@
       $scope.imageDetailsModal = modal;
     });
 
+    function getRandomProducts(products) {
+      var resultingProducts = [];
+      for (var i = 0; i <= 3; i++) {
+        resultingProducts.push(products[parseInt(Math.random() * 10)]);
+      }
+      return resultingProducts;
+    }
+
+    if (ProductService.getAllProducts()) {
+      $scope.allProducts = ProductService.getAllProducts();
+      $scope.alsoPurchasedProducts = getRandomProducts($scope.allProducts);
+    }
+
     var imageModalDelegate = $ionicSlideBoxDelegate.$getByHandle('imageModalDelegateHandle');
 
     $scope.openImageDetailsModal = function () {

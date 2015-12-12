@@ -9269,6 +9269,9 @@ a.button {
   white-space: normal;
   padding: 2px 0; }
 
+.product_details_view .product_details_content .may_like .row {
+  white-space: normal; }
+
 .image_detail_modal_view {
   background-color: rgba(0, 0, 0, 0.75); }
   .image_detail_modal_view .image_detail_close_btn .button {
