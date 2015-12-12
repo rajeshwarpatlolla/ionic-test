@@ -2,7 +2,18 @@
   angular.module('starter.controllers')
     .controller('HomeCtrl', HomeCtrl);
 
-  function HomeCtrl($scope, $state, $timeout, $ionicScrollDelegate, ScrollService, ApiFactory) {
+  function HomeCtrl($scope, $state, $timeout, $ionicSlideBoxDelegate, $ionicScrollDelegate, ScrollService, ApiFactory) {
+
+    $scope.$on('$ionicView.beforeEnter', function () {
+      $ionicSlideBoxDelegate.$getByHandle('home_slidebox_dh').update();
+    });
+
+    var homeSliderDelegate;
+
+    setTimeout(function () {
+      homeSliderDelegate = $ionicSlideBoxDelegate.$getByHandle("home_slidebox_dh");
+      homeSliderDelegate.update();
+    }, 100);
 
     $timeout(function () {
       return false;
@@ -19,9 +30,9 @@
     });
 
 
-    function getAllProducts() {
+    function getHomePageProducts() {
       ApiFactory
-        .getAllDataFact()
+        .getHomePageDataFact()
         .then(function (response) {
           $scope.wholeData = response;
         }, function (error) {
@@ -29,7 +40,7 @@
         })
     }
 
-    getAllProducts();
+    getHomePageProducts();
 
     $scope.changeState = function (toState) {
       $state.go(toState);
