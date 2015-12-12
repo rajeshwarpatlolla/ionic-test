@@ -2,7 +2,7 @@
 
   <ion-content class="home_content">
 
-    <ion-slide-box>
+    <ion-slide-box delegate-handle="home_slidebox_dh">
       <ion-slide ng-repeat="slider in wholeData.sliderImages">
         <img ng-src="{{slider.img}}" alt="full-image"/>
       </ion-slide>

@@ -2,11 +2,12 @@ angular.module('starter.factories')
   .factory('ApiFactory', ApiFactory);
 
 function ApiFactory($q, $resource) {
-  var jsonResource = $resource('data/whole_data.json', null, {update: {method: 'PUT'}});
+  var homeResource = $resource('data/home_page_data.json', null, {update: {method: 'PUT'}});
+  var productsResource = $resource('data/products_page_data.json', null, {update: {method: 'PUT'}});
 
-  function getAllDataFact() {
+  function getHomePageDataFact() {
     var defer = $q.defer();
-    jsonResource
+    homeResource
       .get('', {}, function (response) {
         defer.resolve(response);
       }, function (error) {
@@ -15,8 +16,20 @@ function ApiFactory($q, $resource) {
     return defer.promise;
   }
 
+  function getProductsDataFact() {
+    var defer = $q.defer();
+    productsResource
+      .query('', {}, function (response) {
+        defer.resolve(response);
+      }, function (error) {
+        defer.reject(error);
+      });
+    return defer.promise;
+  }
+
   return {
-    getAllDataFact: getAllDataFact
+    getHomePageDataFact: getHomePageDataFact,
+    getProductsDataFact: getProductsDataFact
   }
 
 }
