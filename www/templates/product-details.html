@@ -80,19 +80,28 @@
       </div>
     </div>
 
+    <div class="item item-icon-right reviews_item" ng-click="changeState('app.tabs.reviews')">
+      <div class="font_bold">Reviews</div>
+      <i class="icon ion-chevron-right"></i>
+    </div>
+
     <div class="item padding may_like">
       <div class="font_bold padding_tb_5px">You may also like</div>
       <div ng-repeat="product in alsoPurchasedProducts track by $index">
         <div class="row text-center" ng-if="$even">
           <div class="col-50">
-            <div><img ng-src="{{product.images[0].src}}" alt="" class="full-image"/></div>
-            <div class="font_14px">{{product.name}}</div>
-            <div class="font_12px">{{product.price | currency : product.currency}}</div>
+            <div><img ng-src="{{alsoPurchasedProducts[$index].images[0].src}}" alt="" class="full-image"/></div>
+            <div class="font_14px">{{alsoPurchasedProducts[$index].name}}</div>
+            <div class="font_12px">{{alsoPurchasedProducts[$index].price | currency :
+              alsoPurchasedProducts[$index].currency}}
+            </div>
           </div>
           <div class="col-50">
-            <div><img ng-src="{{product.images[0].src}}" alt="" class="full-image"/></div>
-            <div class="font_14px">{{product.name}}</div>
-            <div class="font_12px">{{product.price | currency : product.currency}}</div>
+            <div><img ng-src="{{alsoPurchasedProducts[$index+1].images[0].src}}" alt="" class="full-image"/></div>
+            <div class="font_14px">{{alsoPurchasedProducts[$index+1].name}}</div>
+            <div class="font_12px">{{alsoPurchasedProducts[$index+1].price | currency :
+              alsoPurchasedProducts[$index+1].currency}}
+            </div>
           </div>
         </div>
       </div>

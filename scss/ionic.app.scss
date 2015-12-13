@@ -286,6 +286,13 @@ $px10: 10px;
         padding: 2px 0;
       }
     }
+    .reviews_item {
+      padding: 10px;
+      font-size: 14px;
+      .icon {
+        font-size: 16px;
+      }
+    }
     .may_like {
       .row {
         white-space: normal;
@@ -319,6 +326,26 @@ $px10: 10px;
   }
   .slider-pager-page {
     color: #bbb;
+  }
+}
+
+.reviews_view {
+  .reviews_content {
+    .selling_price {
+      color: $balanced;
+    }
+    .old_price {
+      color: $assertive;
+      text-decoration: line-through;
+      font-size: 12px;
+    }
+    .ionic_ratings {
+      text-align: left;
+      font-size: 16px;
+      .ionic_rating_icon_on {
+        color: #ffbd40 !important;
+      }
+    }
   }
 }
 

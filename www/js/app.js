@@ -7,6 +7,7 @@
 angular.module('starter', [
   'ionic',
   'ngResource',
+  'ionic-ratings',
   'starter.controllers',
   'starter.constants',
   'starter.directives',
@@ -103,6 +104,15 @@ angular.module('starter', [
           'tab-home': {
             templateUrl: 'templates/product-details.html',
             controller: 'ProductDetailsController'
+          }
+        }
+      })
+      .state('app.tabs.reviews', {
+        url: '/reviews',
+        views: {
+          'tab-home': {
+            templateUrl: 'templates/reviews.html',
+            controller: 'ReviewsController'
           }
         }
       })

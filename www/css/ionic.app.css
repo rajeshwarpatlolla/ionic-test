@@ -9269,6 +9269,12 @@ a.button {
   white-space: normal;
   padding: 2px 0; }
 
+.product_details_view .product_details_content .reviews_item {
+  padding: 10px;
+  font-size: 14px; }
+  .product_details_view .product_details_content .reviews_item .icon {
+    font-size: 16px; }
+
 .product_details_view .product_details_content .may_like .row {
   white-space: normal; }
 
@@ -9293,6 +9299,20 @@ a.button {
     height: 80vh; }
   .image_detail_modal_view .slider-pager-page {
     color: #bbb; }
+
+.reviews_view .reviews_content .selling_price {
+  color: #33cd5f; }
+
+.reviews_view .reviews_content .old_price {
+  color: #ef473a;
+  text-decoration: line-through;
+  font-size: 12px; }
+
+.reviews_view .reviews_content .ionic_ratings {
+  text-align: left;
+  font-size: 16px; }
+  .reviews_view .reviews_content .ionic_ratings .ionic_rating_icon_on {
+    color: #ffbd40 !important; }
 
 .login_view .login_content, .login_view .reset_pwd_content, .login_view .signup_content, .reset_pwd_view .login_content, .reset_pwd_view .reset_pwd_content, .reset_pwd_view .signup_content, .signup_view .login_content, .signup_view .reset_pwd_content, .signup_view .signup_content {
   background: linear-gradient(rgba(100, 100, 100, 0.2), rgba(255, 255, 255, 0.15)), url("../img/mobile-wallpaper-1.png");

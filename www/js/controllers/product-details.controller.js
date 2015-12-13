@@ -47,7 +47,7 @@
       $state.go(toState);
     };
 
-    function getProductsProducts() {
+    function getSingleProduct() {
       ApiFactory
         .getProductsDataFact()
         .then(function (response) {
@@ -60,7 +60,7 @@
     if (ProductService.getSelectedProduct()) {
       $scope.productDetails = ProductService.getSelectedProduct();
     } else {
-      getProductsProducts();
+      getSingleProduct();
     }
 
 
