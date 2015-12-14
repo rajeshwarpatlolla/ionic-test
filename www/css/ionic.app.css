@@ -9386,6 +9386,16 @@ a.button {
   .orders_view .orders_content .item-thumbnail-left > img:first-child {
     max-width: 60px; }
 
+.wishlist_view .wishlist_content .right_options_item {
+  margin-bottom: 5px; }
+  .wishlist_view .wishlist_content .right_options_item .item-content {
+    padding: 10px; }
+
+.cart_view .cart_content .right_options_item {
+  margin-bottom: 5px; }
+  .cart_view .cart_content .right_options_item .item-content {
+    padding: 10px; }
+
 .addresses_view .addresses_content .right_options_item {
   margin-bottom: 5px; }
   .addresses_view .addresses_content .right_options_item .item-content {
@@ -9577,6 +9587,9 @@ ion-scroll {
 
 .margin_5px {
   margin: 5px; }
+
+.margin_top {
+  margin-top: 10px; }
 
 .margin_top_5px {
   margin-top: 5px; }
