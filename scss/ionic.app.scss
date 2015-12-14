@@ -458,6 +458,32 @@ $px10: 10px;
   }
 }
 
+.addresses_view {
+  .addresses_content {
+    .right_options_item {
+      margin-bottom: 5px;
+      .item-content {
+        padding: 10px;
+      }
+    }
+  }
+}
+
+.cards_view {
+  .cards_content {
+    .right_options_item {
+      margin-bottom: 5px;
+      .item-content {
+        padding: 10px;
+      }
+    }
+    .card_img {
+      max-width: 80px;
+      max-height: 50px;
+    }
+  }
+}
+
 .wallet_view {
   .wallet_content {
 

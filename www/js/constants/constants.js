@@ -1,6 +1,5 @@
 angular.module('starter.constants', [])
-  .controller('urls', urls);
-
-function urls() {
-
-}
+  .constant('vars', {
+    googleAnalyticsId:'UA-71373720-1'
+  })
+  .constant('urls', {});

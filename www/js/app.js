@@ -15,7 +15,7 @@ angular.module('starter', [
   'starter.factories'
 ])
 
-  .run(function ($ionicPlatform) {
+  .run(function ($ionicPlatform, vars) {
     $ionicPlatform.ready(function () {
       // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
       // for form inputs)
@@ -28,6 +28,9 @@ angular.module('starter', [
         // org.apache.cordova.statusbar required
         StatusBar.styleDefault();
       }
+      //window.analytics.startTrackerWithId(vars.googleAnalyticsId);
+      //window.analytics.trackView('Run Block');
+      //window.analytics.trackEvent('Category', 'Action', 'Label', 1111);
     });
   })
 

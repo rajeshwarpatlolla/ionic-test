@@ -2,7 +2,12 @@
   angular.module('starter.controllers')
     .controller('HomeCtrl', HomeCtrl);
 
-  function HomeCtrl($scope, $state, $timeout, $ionicSlideBoxDelegate, $ionicScrollDelegate, ScrollService, ApiFactory) {
+  function HomeCtrl($scope, $state, $timeout, $ionicSlideBoxDelegate, $ionicScrollDelegate, ScrollService, ApiFactory, vars) {
+
+    //$cordovaGoogleAnalytics.debugMode();
+    //window.analytics.trackView('Home Page');
+
+    //$cordovaGoogleAnalytics.startTrackerWithId(vars.googleAnalyticsId);
 
     $scope.$on('$ionicView.beforeEnter', function () {
       $ionicSlideBoxDelegate.$getByHandle('home_slidebox_dh').update();
