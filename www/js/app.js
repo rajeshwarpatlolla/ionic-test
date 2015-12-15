@@ -6,6 +6,7 @@
 // 'starter.controllers' is found in controllers.js
 angular.module('starter', [
   'ionic',
+  'ngCordova',
   'ngResource',
   'ionic-ratings',
   'starter.controllers',
@@ -15,7 +16,7 @@ angular.module('starter', [
   'starter.factories'
 ])
 
-  .run(function ($ionicPlatform, vars) {
+  .run(function ($ionicPlatform, $cordovaGoogleAnalytics, vars) {
     $ionicPlatform.ready(function () {
       // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
       // for form inputs)
@@ -28,9 +29,11 @@ angular.module('starter', [
         // org.apache.cordova.statusbar required
         StatusBar.styleDefault();
       }
-      //window.analytics.startTrackerWithId(vars.googleAnalyticsId);
-      //window.analytics.trackView('Run Block');
-      //window.analytics.trackEvent('Category', 'Action', 'Label', 1111);
+
+      //$cordovaGoogleAnalytics.startTrackerWithId(vars.googleAnalyticsId);
+      window.analytics.startTrackerWithId(vars.googleAnalyticsId);
+      window.analytics.trackView('RunBlock');
+      window.analytics.trackEvent('Category', 'Action', 'Label', 1111);
     });
   })
 
