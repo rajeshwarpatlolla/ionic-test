@@ -31,9 +31,9 @@ angular.module('starter', [
       }
 
       //$cordovaGoogleAnalytics.startTrackerWithId(vars.googleAnalyticsId);
-      window.analytics.startTrackerWithId(vars.googleAnalyticsId);
-      window.analytics.trackView('RunBlock');
-      window.analytics.trackEvent('Category', 'Action', 'Label', 1111);
+      //window.analytics.startTrackerWithId(vars.googleAnalyticsId);
+      //window.analytics.trackView('RunBlock');
+      //window.analytics.trackEvent('Category', 'Action', 'Label', 1111);
     });
   })
 

@@ -2,18 +2,30 @@
   angular.module('starter.controllers')
     .controller('ProductsController', ProductsController);
 
-  function ProductsController($scope, $state, $timeout, $ionicModal, $ionicActionSheet, $ionicPopup, $ionicScrollDelegate, ScrollService, ApiFactory, ProductService) {
+  function ProductsController($scope, $state, $timeout, $ionicModal, $ionicActionSheet, $ionicPopup, $ionicScrollDelegate, ScrollService, ApiFactory, ProductService, loader) {
 
     $scope.sortType;
     $scope.sortReverse;
     $scope.wishlistItems = [];
     $scope.cartItems = [];
 
-    function getProductsProducts() {
+    function showLoaders() {
+      loader.show();
+      setTimeout(function () {
+        loader.hide();
+      }, 1000);
+    }
+
+    function getProductsProducts(val) {
+      showLoaders();
       ApiFactory
         .getProductsDataFact()
         .then(function (response) {
-          $scope.allProducts = response;
+          if (val === 'more') {
+            $scope.allProducts = response;
+          } else {
+            $scope.allProducts = response;
+          }
           ProductService.setAllProducts(response);
         }, function (error) {
           console.log(error);
@@ -21,6 +33,19 @@
     }
 
     getProductsProducts();
+
+    $scope.refreshTheProducts = function () {
+      $scope.allProducts = [];
+      getProductsProducts();
+      $scope.$broadcast('scroll.refreshComplete');
+    };
+
+    $scope.loadMoreProducts = function () {
+      $scope.allProducts = [];
+      console.log('more');
+      getProductsProducts('more');
+      $scope.$broadcast('scroll.infiniteScrollComplete');
+    };
 
     $scope.changeState = function (toState) {
       $state.go(toState);

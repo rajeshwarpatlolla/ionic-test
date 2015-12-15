@@ -171,6 +171,12 @@ $px10: 10px;
   }
   .products_content {
     top: 88px !important;
+    padding: 5px 0;
+    .image {
+      max-height: 80px;
+      width: 100%;
+      max-width: 60px;
+    }
     .old_price {
       color: $assertive;
       font-size: 11px;
@@ -185,7 +191,7 @@ $px10: 10px;
 .platform-ios {
   .products_view {
     .products_content {
-      top: 94px !important;
+      top: 100px !important;
     }
   }
 
@@ -639,6 +645,10 @@ ion-scroll {
 
 .more_options_btn {
   width: 30px;
+}
+
+.fill_ff {
+  fill: #fff;
 }
 
 //============================================================================================================

@@ -9,12 +9,14 @@
       </div>
     </div>
   </div>
-  <ion-content class="products_content padding_tb_5px padding_lr_zero">
-    <div class="list card margin_zero">
-      <div class="item padding" ng-repeat="product in allProducts | orderBy : sortType : sortReverse">
+  <ion-content class="products_content">
+    <ion-refresher pulling-text="Pull to refresh..." on-refresh="refreshTheProducts()"></ion-refresher>
+
+    <div class="list card margin_zero" ng-show="allProducts.length > 0">
+      <div class="item padding" ng-repeat="product in allProducts | orderBy : sortType : sortReverse track by $index">
         <div class="row padding_zero">
           <div class="col-25" ng-click="goToProductDetailsPage(product)">
-            <img ng-src="{{product.images[0].src}}" class="full-image">
+            <img ng-src="{{product.images[0].src}}" class="image">
           </div>
           <div class="col-66 padding-left" ng-click="goToProductDetailsPage(product)">
             <div class="font_14px white_space_normal">{{product.name}}</div>
@@ -39,6 +41,8 @@
         </div>
       </div>
     </div>
+
+    <!--<ion-infinite-scroll on-infinite="loadMoreProducts()" distance="2%"></ion-infinite-scroll>-->
   </ion-content>
 
 </ion-view>

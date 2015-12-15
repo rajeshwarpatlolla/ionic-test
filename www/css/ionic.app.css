@@ -9184,7 +9184,12 @@ a.button {
   border-bottom: 1px solid #dddddd; }
 
 .products_view .products_content {
-  top: 88px !important; }
+  top: 88px !important;
+  padding: 5px 0; }
+  .products_view .products_content .image {
+    max-height: 80px;
+    width: 100%;
+    max-width: 60px; }
   .products_view .products_content .old_price {
     color: #ef473a;
     font-size: 11px;
@@ -9193,7 +9198,7 @@ a.button {
     color: #f55; }
 
 .platform-ios .products_view .products_content {
-  top: 94px !important; }
+  top: 100px !important; }
 
 .sort_list .item-radio {
   border-right: none;
@@ -9511,6 +9516,9 @@ ion-scroll {
 
 .more_options_btn {
   width: 30px; }
+
+.fill_ff {
+  fill: #fff; }
 
 .padding_zero {
   padding: 0; }
