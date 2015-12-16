@@ -9317,7 +9317,9 @@ a.button {
   text-align: left;
   font-size: 16px; }
   .reviews_view .reviews_content .ionic_ratings .ionic_rating_icon_on {
-    color: #ffbd40 !important; }
+    color: #FFAA00 !important; }
+  .reviews_view .reviews_content .ionic_ratings .ionic_rating_icon_off {
+    color: #FFAA00 !important; }
 
 .login_view .login_content, .login_view .reset_pwd_content, .login_view .signup_content, .reset_pwd_view .login_content, .reset_pwd_view .reset_pwd_content, .reset_pwd_view .signup_content, .signup_view .login_content, .signup_view .reset_pwd_content, .signup_view .signup_content {
   background: linear-gradient(rgba(100, 100, 100, 0.2), rgba(255, 255, 255, 0.15)), url("../img/mobile-wallpaper-1.png");
