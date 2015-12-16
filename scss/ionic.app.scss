@@ -475,6 +475,20 @@ $px10: 10px;
         padding: 10px;
       }
     }
+    .product_image {
+      max-height: 150px;
+      width: 100%;
+      max-width: 100px;
+    }
+    .quantity {
+      max-width: 200px;
+      .item-select {
+        padding: 0;
+      }
+      .input-label {
+        padding: 0;
+      }
+    }
   }
 }
 
@@ -484,6 +498,20 @@ $px10: 10px;
       margin-bottom: 5px;
       .item-content {
         padding: 10px;
+      }
+    }
+    .product_image {
+      max-height: 150px;
+      width: 100%;
+      max-width: 100px;
+    }
+    .quantity {
+      max-width: 200px;
+      .item-select {
+        padding: 0;
+      }
+      .input-label {
+        padding: 0;
       }
     }
   }

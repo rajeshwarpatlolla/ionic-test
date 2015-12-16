@@ -9398,10 +9398,29 @@ a.button {
   .wishlist_view .wishlist_content .right_options_item .item-content {
     padding: 10px; }
 
+.wishlist_view .wishlist_content .product_image {
+  max-height: 150px;
+  width: 100%;
+  max-width: 100px; }
+
+.wishlist_view .wishlist_content .quantity {
+  max-width: 200px; }
+  .wishlist_view .wishlist_content .quantity .item-select {
+    padding: 0; }
+  .wishlist_view .wishlist_content .quantity .input-label {
+    padding: 0; }
+
 .cart_view .cart_content .right_options_item {
   margin-bottom: 5px; }
   .cart_view .cart_content .right_options_item .item-content {
     padding: 10px; }
+
+.cart_view .cart_content .quantity {
+  max-width: 200px; }
+  .cart_view .cart_content .quantity .item-select {
+    padding: 0; }
+  .cart_view .cart_content .quantity .input-label {
+    padding: 0; }
 
 .addresses_view .addresses_content .right_options_item {
   margin-bottom: 5px; }
