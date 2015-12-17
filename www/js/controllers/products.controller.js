@@ -16,7 +16,7 @@
       }, 1000);
     }
 
-    function getProductsProducts(val) {
+    function getAllProducts(val) {
       showLoaders();
       ApiFactory
         .getProductsDataFact()
@@ -32,18 +32,31 @@
         })
     }
 
-    getProductsProducts();
+    getAllProducts();
+
+    function getAllHomePageProducts() {
+      showLoaders();
+      ApiFactory
+        .getHomePageDataFact()
+        .then(function (response) {
+          $scope.allHomeProducts = response.sliderImages;
+        }, function (error) {
+          console.log(error);
+        })
+    }
+
+    getAllHomePageProducts();
 
     $scope.refreshTheProducts = function () {
       $scope.allProducts = [];
-      getProductsProducts();
+      getAllProducts();
       $scope.$broadcast('scroll.refreshComplete');
     };
 
     $scope.loadMoreProducts = function () {
       $scope.allProducts = [];
       console.log('more');
-      getProductsProducts('more');
+      getAllProducts('more');
       $scope.$broadcast('scroll.infiniteScrollComplete');
     };
 
