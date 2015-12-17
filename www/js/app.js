@@ -104,6 +104,24 @@ angular.module('starter', [
           }
         }
       })
+      .state('app.tabs.products-2', {
+        url: '/products-2',
+        views: {
+          'tab-home': {
+            templateUrl: 'templates/products-2.html',
+            controller: 'ProductsController'
+          }
+        }
+      })
+      .state('app.tabs.products-3', {
+        url: '/products-3',
+        views: {
+          'tab-home': {
+            templateUrl: 'templates/products-3.html',
+            controller: 'ProductsController'
+          }
+        }
+      })
       .state('app.tabs.product-details', {
         url: '/product-details',
         views: {
