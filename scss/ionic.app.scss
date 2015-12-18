@@ -297,8 +297,8 @@ $px10: 10px;
 }
 
 .platform-ios {
-  .products_view {
-    .products_content {
+  .products_view, .products_view_2, .products_view_3 {
+    .products_content, .products_content_2, .products_content_3 {
       top: 100px !important;
     }
   }
