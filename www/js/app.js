@@ -187,6 +187,15 @@ angular.module('starter', [
           }
         }
       })
+      .state('app.tabs.add-address', {
+        url: '/add-address',
+        views: {
+          'tab-account': {
+            templateUrl: 'templates/add-address.html',
+            controller: 'AccountCtrl'
+          }
+        }
+      })
       .state('app.tabs.cards', {
         url: '/cards',
         views: {
@@ -196,11 +205,29 @@ angular.module('starter', [
           }
         }
       })
+      .state('app.tabs.add-card', {
+        url: '/add-card',
+        views: {
+          'tab-account': {
+            templateUrl: 'templates/add-card.html',
+            controller: 'AccountCtrl'
+          }
+        }
+      })
       .state('app.tabs.coupons', {
         url: '/coupons',
         views: {
           'tab-account': {
             templateUrl: 'templates/coupons.html',
+            controller: 'AccountCtrl'
+          }
+        }
+      })
+      .state('app.tabs.add-coupon', {
+        url: '/add-coupon',
+        views: {
+          'tab-account': {
+            templateUrl: 'templates/add-coupon.html',
             controller: 'AccountCtrl'
           }
         }

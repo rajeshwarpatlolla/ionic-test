@@ -9284,7 +9284,7 @@ a.button {
       padding: 10px;
       width: 100%; }
 
-.platform-ios .products_view .products_content {
+.platform-ios .products_view .products_content, .platform-ios .products_view .products_content_2, .platform-ios .products_view .products_content_3, .platform-ios .products_view_2 .products_content, .platform-ios .products_view_2 .products_content_2, .platform-ios .products_view_2 .products_content_3, .platform-ios .products_view_3 .products_content, .platform-ios .products_view_3 .products_content_2, .platform-ios .products_view_3 .products_content_3 {
   top: 100px !important; }
 
 .sort_list .item-radio {
