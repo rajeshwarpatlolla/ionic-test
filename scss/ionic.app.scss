@@ -165,6 +165,14 @@ $px10: 10px;
   }
 }
 
+.search_view {
+  .search_content {
+    .item {
+      padding: 10px;
+    }
+  }
+}
+
 .products_view {
   .bar-subheader {
     border-bottom: 1px solid #dddddd;
@@ -656,8 +664,8 @@ $px10: 10px;
   }
 }
 
-.home_view, .addresses_view, .cards_view, .coupons_view, .cart_view, .wishlist_view, .wallet_view, .products_view, .products_view_2, .products_view_3, .product_details_view {
-  .home_content, .addresses_content, .cards_content, .coupons_content, .cart_content, .wishlist_content, .wallet_content, .products_content, .products_content_2, .products_content_3, .product_details_content {
+.home_view, .addresses_view, .cards_view, .coupons_view, .cart_view, .wishlist_view, .wallet_view, .products_view, .products_view_2, .products_view_3, .product_details_view, .search_view {
+  .home_content, .addresses_content, .cards_content, .coupons_content, .cart_content, .wishlist_content, .wallet_content, .products_content, .products_content_2, .products_content_3, .product_details_content, .search_content {
     background-color: $page_bg_color;
     .card {
       border-top-right-radius: 4px;

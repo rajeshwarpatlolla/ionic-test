@@ -95,6 +95,15 @@ angular.module('starter', [
           }
         }
       })
+      .state('app.tabs.search', {
+        url: '/search',
+        views: {
+          'tab-home': {
+            templateUrl: 'templates/search.html',
+            controller: 'HomeCtrl'
+          }
+        }
+      })
       .state('app.tabs.products', {
         url: '/products',
         views: {
