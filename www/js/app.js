@@ -149,6 +149,15 @@ angular.module('starter', [
           }
         }
       })
+      .state('app.tabs.write-review', {
+        url: '/write-review',
+        views: {
+          'tab-home': {
+            templateUrl: 'templates/write-review.html',
+            controller: 'ReviewsController'
+          }
+        }
+      })
 
       .state('app.tabs.wishlist', {
         url: '/wishlist',
