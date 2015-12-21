@@ -1,7 +1,7 @@
 angular.module('starter.controllers')
   .controller('MenuCtrl', MenuCtrl);
 
-function MenuCtrl($ionicPopover, $scope, $state, $cordovaInAppBrowser) {
+function MenuCtrl($ionicPopover, $scope, $state, $cordovaInAppBrowser, $cordovaSocialSharing) {
 
   $ionicPopover.fromTemplateUrl('templates/more-options-popover.html', {
     scope: $scope
@@ -34,6 +34,19 @@ function MenuCtrl($ionicPopover, $scope, $state, $cordovaInAppBrowser) {
       console.log('error in $cordovaInAppBrowser');
     }
     $scope.closeMoreOptionsPopover();
+  };
+
+
+  $scope.shareonFaceBook = function () {
+    $cordovaSocialSharing
+      .shareViaFacebook('E-Commerce App', 'Subject', 'http://www.hydramarketingtechnology.com/wp-content/uploads/2013/10/E-Commerce-Icon.png')
+      .then(function (result) {
+        // Success!
+        console.log('Social share Success');
+      }, function (err) {
+        // An error occurred. Show a message to the user
+        console.log('Social share Error');
+      });
   };
 
 }
