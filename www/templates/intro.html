@@ -5,7 +5,17 @@
         <div class="slide_content">
           <h3>Heading</h3>
 
-          <p>This is slide {{$index + 1}}</p>
+          <div class="image">
+            <img src="img/logo.png" alt="" class="logo"/>
+          </div>
+          <div class="padding_top_30px">
+            <div class="font_16px padding">This is slide {{$index + 1}}.</div>
+            <div class="font_14px">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam doloremque
+              excepturi facere harum
+              incidunt ipsam ipsum natus perspiciatis sunt totam! Adipisci eius esse est in libero quam temporibus
+              tenetur veritatis!
+            </div>
+          </div>
         </div>
         <div class="start_btn" ng-if="($index + 1) == slides.length">
           <button class="button button-block button-positive" ui-sref="login">Get Started</button>

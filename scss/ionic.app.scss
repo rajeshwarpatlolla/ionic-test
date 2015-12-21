@@ -59,7 +59,14 @@ $px10: 10px;
       }
       .slide_content {
         text-align: center;
-        padding-top: 220px;
+        padding-top: 100px;
+        .image {
+          padding: 20px;
+          .logo {
+            width: 100px;
+            height: 100px;
+          }
+        }
         h3 {
           color: #000;
           font-size: 24px;
@@ -106,6 +113,24 @@ $px10: 10px;
     .item-input {
       padding: 10px 0 0 5px;
     }
+  }
+  .logo {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+.signup_content {
+  .logo {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+.reset_pwd_content {
+  .logo {
+    width: 100px;
+    height: 100px;
   }
 }
 
