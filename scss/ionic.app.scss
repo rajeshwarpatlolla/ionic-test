@@ -225,7 +225,7 @@ $px10: 10px;
     }
     .ionic_ratings {
       text-align: left;
-      font-size: 16px;
+      font-size: 14px;
       .ionic_rating_icon_on {
         color: #FFAA00 !important
       }
@@ -295,6 +295,15 @@ $px10: 10px;
       position: absolute;
       bottom: 5px;
       width: 100%;
+    }
+    .ionic_ratings {
+      font-size: 14px;
+      .ionic_rating_icon_on {
+        color: #FFAA00 !important
+      }
+      .ionic_rating_icon_off {
+        color: #FFAA00 !important
+      }
     }
   }
 }
@@ -506,7 +515,7 @@ $px10: 10px;
     }
     .ionic_ratings {
       text-align: left;
-      font-size: 16px;
+      font-size: 14px;
       .ionic_rating_icon_on {
         color: #FFAA00 !important
       }

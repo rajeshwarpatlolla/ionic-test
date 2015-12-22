@@ -28,6 +28,7 @@
                   <div class="font_10px">
                     {{allProducts[$index].internal_storage}}, {{allProducts[$index].screen_size}} inch
                   </div>
+                  <div class="font_14px"><ionic-ratings ratingsobj='ratingsObject'></ionic-ratings></div>
                   <div class="font_14px font_bold">
                     {{allProducts[$index].price | currency:allProducts[$index].currency +' '}}
                   </div>
@@ -48,6 +49,7 @@
                   <div class="font_10px">
                     {{allProducts[$index+1].internal_storage}}, {{allProducts[$index+1].screen_size}} inch
                   </div>
+                  <div class="font_14px"><ionic-ratings ratingsobj='ratingsObject'></ionic-ratings></div>
                   <div class="font_14px font_bold">
                     {{allProducts[$index+1].price | currency:allProducts[$index+1].currency +' '}}
                   </div>
