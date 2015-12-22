@@ -223,6 +223,16 @@ $px10: 10px;
       border-bottom: 1px solid #ccc;
       margin-bottom: 2px;
     }
+    .ionic_ratings {
+      text-align: left;
+      font-size: 16px;
+      .ionic_rating_icon_on {
+        color: #FFAA00 !important
+      }
+      .ionic_rating_icon_off {
+        color: #FFAA00 !important
+      }
+    }
   }
 }
 
@@ -415,6 +425,15 @@ $px10: 10px;
       }
       .slider-pager-page {
         color: #888;
+      }
+    }
+    .ionic_ratings {
+      font-size: 16px;
+      .ionic_rating_icon_on {
+        color: #FFAA00 !important
+      }
+      .ionic_rating_icon_off {
+        color: #FFAA00 !important
       }
     }
     .selling_price {

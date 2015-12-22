@@ -11,6 +11,7 @@
     <div class="list margin_zero">
       <div class="item text-center padding">
         <div>{{productDetails.name}}</div>
+        <div class="font_14px"><ionic-ratings ratingsobj='ratingsObject'></ionic-ratings></div>
         <div class="row font_14px">
           <div class="col-50 selling_price">{{productDetails.price | currency:productDetails.currency + ' '}}</div>
           <div class="col-50 old_price">{{productDetails.old_price | currency:productDetails.currency + ' '}}</div>

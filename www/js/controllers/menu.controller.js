@@ -1,7 +1,7 @@
 angular.module('starter.controllers')
   .controller('MenuCtrl', MenuCtrl);
 
-function MenuCtrl($ionicPopover, $scope, $state, $cordovaInAppBrowser, $cordovaSocialSharing) {
+function MenuCtrl($ionicPopover, $scope, $state, $cordovaInAppBrowser, $cordovaSocialSharing, $cordovaLocalNotification) {
 
   $ionicPopover.fromTemplateUrl('templates/more-options-popover.html', {
     scope: $scope
@@ -48,5 +48,19 @@ function MenuCtrl($ionicPopover, $scope, $state, $cordovaInAppBrowser, $cordovaS
         console.log('Social share Error');
       });
   };
+
+  $scope.showLocalNotification = function () {
+    var notificationTime = new Date((new Date()).getTime() + (1 * 1000));
+
+    $cordovaLocalNotification.schedule({
+      id: 1,
+      title: 'Title',
+      text: 'Text',
+      at: notificationTime
+    }).then(function (result) {
+      console.log('Local Notification');
+    });
+  };
+
 
 }

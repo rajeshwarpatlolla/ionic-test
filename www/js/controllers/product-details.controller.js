@@ -4,6 +4,14 @@
 
   function ProductDetailsController($scope, $state, $timeout, $ionicSlideBoxDelegate, $ionicModal, $ionicActionSheet, $ionicPopup, $ionicScrollDelegate, ScrollService, ApiFactory, ProductService) {
 
+    $scope.ratingsObject = {
+      rating: 4,
+      readOnly: true,
+      callback: function (rating) {
+        console.log(rating)
+      }
+    };
+
     $scope.$on('$ionicView.beforeEnter', function () {
       $ionicSlideBoxDelegate.$getByHandle('productSliderDelegateHandle').update();
     });

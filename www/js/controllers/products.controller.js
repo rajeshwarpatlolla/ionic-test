@@ -9,6 +9,14 @@
     $scope.wishlistItems = [];
     $scope.cartItems = [];
 
+    $scope.ratingsObject = {
+      rating: 4,
+      readOnly: true,
+      callback: function (rating) {
+        console.log(rating)
+      }
+    };
+
     function showLoaders() {
       loader.show();
       setTimeout(function () {

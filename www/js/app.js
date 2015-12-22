@@ -16,7 +16,7 @@ angular.module('starter', [
   'starter.factories'
 ])
 
-  .run(function ($ionicPlatform, $cordovaGoogleAnalytics, vars) {
+  .run(function ($ionicPlatform, $cordovaGoogleAnalytics, $rootScope, vars) {
     $ionicPlatform.ready(function () {
       // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
       // for form inputs)
@@ -34,6 +34,11 @@ angular.module('starter', [
       //window.analytics.startTrackerWithId(vars.googleAnalyticsId);
       //window.analytics.trackView('RunBlock');
       //window.analytics.trackEvent('Category', 'Action', 'Label', 1111);
+
+      $rootScope.$on('$cordovaInAppBrowser:exit', function (e, event) {
+        console.log('inapp browser closed');
+      });
+
     });
   })
 

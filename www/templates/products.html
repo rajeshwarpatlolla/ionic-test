@@ -21,6 +21,7 @@
           <div class="col-66 padding-left" ng-click="goToProductDetailsPage(product)">
             <div class="font_14px white_space_normal">{{product.name}}</div>
             <div class="font_10px color_88">{{product.internal_storage}}, {{product.screen_size}} inch</div>
+            <div class="font_14px"><ionic-ratings ratingsobj='ratingsObject'></ionic-ratings></div>
             <div class="font_12px row padding_zero">
               <div class="col-50">{{product.price | currency:product.currency +' '}}</div>
               <div class="col-50 old_price" ng-if="product.old_price">
