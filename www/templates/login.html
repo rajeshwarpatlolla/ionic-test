@@ -2,22 +2,30 @@
   <ion-content class="login_content">
 
     <div class="list padding login_container">
-      <div class="item text-center border_bottom_none">
-        <img src="img/logo.png" alt="" class="logo"/>
-      </div>
-      <div class="item item-input">
-        <input type="text" placeholder="Enter username"/>
-      </div>
-      <div class="item item-input">
-        <input type="password" placeholder="Enter password"/>
-      </div>
-      <button class="button button-block button-outline color_ff font_bold login_btn" ng-click="changeState('app.tabs.home')">Login</button>
-      <div class="display_inline_box">
-        <button class="button button-clear button-small button-light font_12px" ng-click="changeState('reset-pwd')">Forgot password?</button>
-      </div>
-      <div class="display_inline_box float_right">
-        <button class="button button-clear button-small button-light font_12px" ng-click="changeState('signup')">Create Account</button>
-      </div>
+      <form name="loginForm">
+        <div class="item text-center border_bottom_none">
+          <img src="img/logo.png" alt="" class="logo"/>
+        </div>
+        <div class="item item-input">
+          <input type="text" placeholder="Enter username" name="username" required ng-model="login.username"/>
+        </div>
+        <div class="item item-input">
+          <input type="password" placeholder="Enter password" name="password" required ng-model="login.password"/>
+        </div>
+        <button type="submit" class="button button-block button-outline color_ff font_bold login_btn"
+                ng-click="changeState('app.tabs.home')" ng-disabled="loginForm.$invalid">Login
+        </button>
+        <div class="display_inline_box">
+          <button type="button" class="button button-clear button-small button-light font_12px"
+                  ng-click="changeState('reset-pwd')">Forgot password?
+          </button>
+        </div>
+        <div class="display_inline_box float_right">
+          <button type="button" class="button button-clear button-small button-light font_12px"
+                  ng-click="changeState('signup')">Create Account
+          </button>
+        </div>
+      </form>
     </div>
 
   </ion-content>
