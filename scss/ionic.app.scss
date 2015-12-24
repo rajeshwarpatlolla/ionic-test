@@ -113,6 +113,11 @@ $px10: 10px;
     .item-input {
       padding: 10px 0 0 5px;
     }
+    .login_with {
+      color: #fff;
+      padding-top: 15px;
+      display: -webkit-inline-box;
+    }
   }
   .logo {
     width: 100px;
@@ -533,7 +538,7 @@ $px10: 10px;
     @extend .bg_full;
     background-color: #555;
     padding: 10px;
-    padding-top: 120px;
+    padding-top: 80px;
 
     .list {
       background-color: rgba(0, 0, 0, 0.55) !important;

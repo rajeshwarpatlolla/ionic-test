@@ -9140,6 +9140,10 @@ a.button {
     margin-top: 20px; }
   .login_content .login_container .item-input {
     padding: 10px 0 0 5px; }
+  .login_content .login_container .login_with {
+    color: #fff;
+    padding-top: 15px;
+    display: -webkit-inline-box; }
 
 .login_content .logo {
   width: 100px;
@@ -9452,7 +9456,7 @@ a.button {
   background: linear-gradient(rgba(100, 100, 100, 0.2), rgba(255, 255, 255, 0.15)), url("../img/mobile-wallpaper-1.png");
   background-color: #555;
   padding: 10px;
-  padding-top: 120px; }
+  padding-top: 80px; }
   .login_view .login_content .list, .login_view .reset_pwd_content .list, .login_view .signup_content .list, .reset_pwd_view .login_content .list, .reset_pwd_view .reset_pwd_content .list, .reset_pwd_view .signup_content .list, .signup_view .login_content .list, .signup_view .reset_pwd_content .list, .signup_view .signup_content .list {
     background-color: rgba(0, 0, 0, 0.55) !important; }
     .login_view .login_content .list .item, .login_view .reset_pwd_content .list .item, .login_view .signup_content .list .item, .reset_pwd_view .login_content .list .item, .reset_pwd_view .reset_pwd_content .list .item, .reset_pwd_view .signup_content .list .item, .signup_view .login_content .list .item, .signup_view .reset_pwd_content .list .item, .signup_view .signup_content .list .item {

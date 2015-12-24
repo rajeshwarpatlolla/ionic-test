@@ -7,6 +7,7 @@
   "dependencies": {
     "angular-resource": "~1.4.8",
     "ionic-ratings": "~0.2.0",
-    "ngCordova": "~0.1.23-alpha"
+    "ngCordova": "~0.1.23-alpha",
+    "satellizer": "~0.13.3"
   }
 }
