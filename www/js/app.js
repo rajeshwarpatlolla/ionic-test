@@ -163,6 +163,15 @@ angular.module('starter', [
           }
         }
       })
+      .state('app.tabs.play-video', {
+        url: '/play-video',
+        views: {
+          'tab-home': {
+            templateUrl: 'templates/play-video.html',
+            controller: 'PlayVideoController'
+          }
+        }
+      })
 
       .state('app.tabs.wishlist', {
         url: '/wishlist',
