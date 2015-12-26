@@ -10,6 +10,7 @@ function MenuCtrl($ionicPopover, $scope, $state, $cordovaInAppBrowser, $cordovaS
   });
 
   $scope.changeState = function (toState) {
+    $scope.moreOptionsPopover.hide();
     $state.go(toState);
   };
 
@@ -43,9 +44,11 @@ function MenuCtrl($ionicPopover, $scope, $state, $cordovaInAppBrowser, $cordovaS
       .then(function (result) {
         // Success!
         console.log('Social share Success');
+        $scope.moreOptionsPopover.hide();
       }, function (err) {
         // An error occurred. Show a message to the user
         console.log('Social share Error');
+        $scope.moreOptionsPopover.hide();
       });
   };
 
@@ -59,6 +62,7 @@ function MenuCtrl($ionicPopover, $scope, $state, $cordovaInAppBrowser, $cordovaS
       at: notificationTime
     }).then(function (result) {
       console.log('Local Notification');
+      $scope.moreOptionsPopover.hide();
     });
   };
 
