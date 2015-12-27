@@ -13,8 +13,8 @@
         <div>{{productDetails.name}}</div>
         <div class="font_14px"><ionic-ratings ratingsobj='ratingsObject'></ionic-ratings></div>
         <div class="row font_14px">
-          <div class="col-50 selling_price">{{productDetails.price | currency:productDetails.currency + ' '}}</div>
-          <div class="col-50 old_price">{{productDetails.old_price | currency:productDetails.currency + ' '}}</div>
+          <div class="selling_price" ng-class="{'col-50':productDetails.old_price,'text-center width_100p':!productDetails.old_price}">{{productDetails.price | currency:productDetails.currency + ' '}}</div>
+          <div class="col-50 old_price" ng-if="productDetails.old_price">{{productDetails.old_price | currency:productDetails.currency + ' '}}</div>
         </div>
       </div>
       <div class="row padding_zero">
