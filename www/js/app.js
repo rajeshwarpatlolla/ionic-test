@@ -30,7 +30,7 @@ angular.module('starter', [
         StatusBar.styleDefault();
       }
 
-      //$cordovaGoogleAnalytics.startTrackerWithId(vars.googleAnalyticsId);
+      $cordovaGoogleAnalytics.startTrackerWithId(vars.googleAnalyticsId);
       //window.analytics.startTrackerWithId(vars.googleAnalyticsId);
       //window.analytics.trackView('RunBlock');
       //window.analytics.trackEvent('Category', 'Action', 'Label', 1111);
