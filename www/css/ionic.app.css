@@ -9079,6 +9079,9 @@ a.button {
   -webkit-transition-duration: 0s;
   transition-duration: 0s; }
 
+.bg_none {
+  background: none; }
+
 .bg_full, .login_view .login_content, .login_view .reset_pwd_content, .login_view .signup_content, .reset_pwd_view .login_content, .reset_pwd_view .reset_pwd_content, .reset_pwd_view .signup_content, .signup_view .login_content, .signup_view .reset_pwd_content, .signup_view .signup_content {
   background-position: center center;
   background-repeat: no-repeat;
@@ -9153,9 +9156,15 @@ a.button {
   width: 100px;
   height: 100px; }
 
+.signup_content .item-input {
+  padding: 10px 0 0 5px; }
+
 .reset_pwd_content .logo {
   width: 100px;
   height: 100px; }
+
+.reset_pwd_content .item-input {
+  padding: 10px 0 0 5px; }
 
 .home_view .home_content ion-slide img {
   height: 150px;
@@ -9768,6 +9777,9 @@ ion-scroll {
 
 .margin_right_5px {
   margin-right: 5px; }
+
+.margin_bottom {
+  margin-bottom: 10px !important; }
 
 .margin_bottom_5px {
   margin-bottom: 5px !important; }

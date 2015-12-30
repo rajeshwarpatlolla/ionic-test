@@ -32,6 +32,10 @@ $px10: 10px;
   max-width: 100px;
 }
 
+.bg_none {
+  background: none;
+}
+
 .bg_full {
   background-position: center center;
   background-repeat: no-repeat;
@@ -104,7 +108,7 @@ $px10: 10px;
   }
 }
 
-.login_content {
+.login_content{
   .login_container {
     .login_btn {
       margin-top: 20px;
@@ -130,12 +134,18 @@ $px10: 10px;
     width: 100px;
     height: 100px;
   }
+  .item-input {
+    padding: 10px 0 0 5px;
+  }
 }
 
 .reset_pwd_content {
   .logo {
     width: 100px;
     height: 100px;
+  }
+  .item-input {
+    padding: 10px 0 0 5px;
   }
 }
 
@@ -986,6 +996,10 @@ ion-scroll {
 
 .margin_right_5px {
   margin-right: $px10 / 2;
+}
+
+.margin_bottom {
+  margin-bottom: $px10 !important;
 }
 
 .margin_bottom_5px {
