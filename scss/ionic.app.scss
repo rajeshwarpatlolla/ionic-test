@@ -108,7 +108,7 @@ $px10: 10px;
   }
 }
 
-.login_content{
+.login_content {
   .login_container {
     .login_btn {
       margin-top: 20px;
@@ -769,6 +769,29 @@ $px10: 10px;
     .full-image {
       @include max_width_100px;
     }
+  }
+}
+
+.content {
+  background-color: $page_bg_color;
+  .card {
+    border-top-right-radius: 4px;
+    border-top-left-radius: 4px;
+  }
+  .tabs-secondary {
+    height: 40px;
+    line-height: 38px;
+    border-top: 1px solid #dddddd !important;
+    .tab-item {
+      font-size: 14px;
+      color: #000000;
+    }
+    .tab-item + .tab-item {
+      border-left: 1px solid #dddddd !important;
+    }
+  }
+  .full-image {
+    @include max_width_100px;
   }
 }
 
