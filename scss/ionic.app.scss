@@ -213,6 +213,15 @@ $px10: 10px;
   }
 }
 
+.more_options_view {
+  .more_options_content {
+    .icon {
+      width: 15px;
+      display: inline-block;
+    }
+  }
+}
+
 .products_view {
   .bar-subheader {
     border-bottom: 1px solid #dddddd;
@@ -408,6 +417,9 @@ $px10: 10px;
     .button {
       line-height: 44px !important;
     }
+  }
+  .active_filter {
+    background-color: $royal !important;
   }
   .filters {
     ion-scroll {

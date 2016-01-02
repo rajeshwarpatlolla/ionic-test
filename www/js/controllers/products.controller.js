@@ -8,6 +8,7 @@
     $scope.sortReverse;
     $scope.wishlistItems = [];
     $scope.cartItems = [];
+    $scope.filterModal = {};
 
     $scope.ratingsObject = {
       rating: 4,
@@ -23,6 +24,25 @@
         loader.hide();
       }, 1000);
     }
+
+    $scope.filterOptionSelected = function (option, index) {
+      $scope.selectedFilter = option.label;
+      $scope.selectedFilterValues = $scope.allFilterOptions[index].values;
+    };
+
+    function getAllFilterData(val) {
+      ApiFactory
+        .getAllFilterDataFact()
+        .then(function (response) {
+          console.log(response);
+          $scope.allFilterOptions = response;
+          $scope.selectedFilterValues = $scope.allFilterOptions[0].values;
+        }, function (error) {
+          console.log(error);
+        })
+    }
+
+    getAllFilterData();
 
     function getAllProducts(val) {
       showLoaders();
@@ -114,7 +134,7 @@
         titleText: 'Sort By',
         cancelText: 'Close',
         cancel: function () {
-          // add cancel code..
+          console.log('Cancel code');
         },
         buttonClicked: function (index) {
           $scope.sortReverse = (index == 3 || index == 1 || index == 0);
@@ -122,7 +142,6 @@
           return true;
         }
       });
-
     };
 
     $ionicModal.fromTemplateUrl('templates/filter-options-modal.html', {
@@ -131,9 +150,15 @@
     }).then(function (modal) {
       $scope.filterModal = modal;
     });
+
     $scope.openFilterModal = function () {
       $scope.filterModal.show();
     };
+
+    $scope.clearFilterSelections = function () {
+      $scope.filterModal = {};
+    };
+
     $scope.closeFilterModal = function () {
       $scope.filterModal.hide();
     };

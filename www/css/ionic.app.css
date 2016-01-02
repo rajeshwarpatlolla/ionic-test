@@ -9213,6 +9213,10 @@ a.button {
 .search_view .search_content .item {
   padding: 10px; }
 
+.more_options_view .more_options_content .icon {
+  width: 15px;
+  display: inline-block; }
+
 .products_view .bar-subheader {
   border-bottom: 1px solid #dddddd; }
 
@@ -9356,6 +9360,9 @@ a.button {
 
 .filter_modal_view ion-footer-bar .button {
   line-height: 44px !important; }
+
+.filter_modal_view .active_filter {
+  background-color: #886aea !important; }
 
 .filter_modal_view .filters ion-scroll {
   width: 100%;

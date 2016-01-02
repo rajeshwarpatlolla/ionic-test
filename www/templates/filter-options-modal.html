@@ -7,16 +7,18 @@
       <div class="col-34 filters">
         <ion-scroll zooming="false" direction="y" class="padding_zero">
           <div class="list">
-            <div class="item" ng-repeat="option in filterOptions">{{option.label}}</div>
+            <div class="item" ng-repeat="option in allFilterOptions"
+              ng-click="filterOptionSelected(option, $index)"
+              ng-class="{'active_filter':(option.label == selectedFilter)}">{{option.label}}</div>
           </div>
         </ion-scroll>
       </div>
       <div class="col-66 filter_options">
         <ion-scroll zooming="false" direction="y" class="padding_zero">
           <ion-list>
-            <ion-checkbox ng-model="filter.blue">Red</ion-checkbox>
-            <ion-checkbox ng-model="filter.yellow">Yellow</ion-checkbox>
-            <ion-checkbox ng-model="filter.pink">Pink</ion-checkbox>
+            <ion-checkbox ng-model="filterModal[value]" ng-repeat="value in selectedFilterValues">
+              <span ng-bind-html="value"></span>
+            </ion-checkbox>
           </ion-list>
         </ion-scroll>
       </div>
@@ -25,7 +27,7 @@
   <ion-footer-bar class="padding_zero">
     <div class="button-bar">
       <a class="button button-light" ng-click="closeFilterModal()">Close</a>
-      <a class="button button-stable" ng-click="closeFilterModal()">Clear</a>
+      <a class="button button-stable" ng-click="clearFilterSelections()">Clear</a>
       <a class="button button-balanced" ng-click="closeFilterModal()">Apply</a>
     </div>
   </ion-footer-bar>
