@@ -2,7 +2,7 @@
   angular.module('starter.controllers')
     .controller('ProductDetailsController', ProductDetailsController);
 
-  function ProductDetailsController($scope, $state, $timeout, $ionicSlideBoxDelegate, $ionicModal, $ionicActionSheet, $ionicPopup, $ionicScrollDelegate, ScrollService, ApiFactory, ProductService) {
+  function ProductDetailsController($scope, $state, $timeout, $ionicSlideBoxDelegate, $ionicModal, $ionicActionSheet, $ionicPopup, $ionicScrollDelegate, ScrollService, ApiFactory, ProductService, $cordovaSocialSharing) {
 
     $scope.ratingsObject = {
       rating: 4,
@@ -70,6 +70,57 @@
     } else {
       getSingleProduct();
     }
+
+
+    $scope.shareTheProduct = function (socialType, obj) {
+      var link = '';
+
+      switch (socialType) {
+        case 'facebook':
+          $cordovaSocialSharing
+            .shareViaFacebook(obj.name, obj.images[0].src, link)
+            .then(function (result) {
+              console.log('Successfully shared via facebook');
+            }, function (err) {
+              console.log('Error while sharing via facebook');
+            });
+          break;
+
+        case 'twitter':
+          $cordovaSocialSharing
+            .shareViaTwitter(obj.name, obj.images[0].src, link)
+            .then(function (result) {
+              console.log('Successfully shared via twitter');
+            }, function (err) {
+              console.log('Error while sharing via twitter');
+            });
+          break;
+
+        case 'whatsapp':
+          $cordovaSocialSharing
+            .shareViaWhatsApp(obj.name, obj.images[0].src, link)
+            .then(function (result) {
+              console.log('Successfully shared via whatsapp');
+            }, function (err) {
+              console.log('Error while sharing via whatsapp');
+            });
+          break;
+
+        case 'chatbubble':
+          $cordovaSocialSharing
+            .shareViaSMS(obj.name, '9030012345')
+            .then(function (result) {
+              console.log('Successfully shared via message');
+            }, function (err) {
+              console.log('Error while sharing via message');
+            });
+          break;
+
+        default:
+          console.log('Not sharing on any social network.');
+      }
+
+    };
 
 
   }

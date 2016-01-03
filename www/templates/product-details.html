@@ -1,4 +1,4 @@
-<ion-view view-title="Product Details" class="product_details_view">
+<ion-view view-title="Product Details" class="product_details_view bg_view">
 
   <ion-content class="product_details_content">
 
@@ -11,10 +11,17 @@
     <div class="list margin_zero">
       <div class="item text-center padding">
         <div>{{productDetails.name}}</div>
-        <div class="font_14px"><ionic-ratings ratingsobj='ratingsObject'></ionic-ratings></div>
+        <div class="font_14px">
+          <ionic-ratings ratingsobj='ratingsObject'></ionic-ratings>
+        </div>
         <div class="row font_14px">
-          <div class="selling_price" ng-class="{'col-50':productDetails.old_price,'text-center width_100p':!productDetails.old_price}">{{productDetails.price | currency:productDetails.currency + ' '}}</div>
-          <div class="col-50 old_price" ng-if="productDetails.old_price">{{productDetails.old_price | currency:productDetails.currency + ' '}}</div>
+          <div class="selling_price"
+               ng-class="{'col-50':productDetails.old_price,'text-center width_100p':!productDetails.old_price}">
+            {{productDetails.price | currency:productDetails.currency + ' '}}
+          </div>
+          <div class="col-50 old_price" ng-if="productDetails.old_price">{{productDetails.old_price |
+            currency:productDetails.currency + ' '}}
+          </div>
         </div>
       </div>
       <div class="row padding_zero">
@@ -34,6 +41,26 @@
             </select>
           </label>
         </div>
+      </div>
+
+      <div class="item padding share_section padding_lr_zero">
+        <div class="uppercase font_12px">share with friends on</div>
+        <ion-scroll direction="x" style="width: 100%; height: 50px" class="padding-top">
+          <div class="social_icons">
+            <div class="social_share_circle" ng-click="shareTheProduct('facebook',productDetails)">
+              <i class="icon ion-social-facebook"></i>
+            </div>
+            <div class="social_share_circle" ng-click="shareTheProduct('twitter',productDetails)">
+              <i class="icon ion-social-twitter"></i>
+            </div>
+            <div class="social_share_circle" ng-click="shareTheProduct('whatsapp',productDetails)">
+              <i class="icon ion-social-whatsapp"></i>
+            </div>
+            <div class="social_share_circle" ng-click="shareTheProduct('chatbubble',productDetails)">
+              <i class="icon ion-ios-chatbubble"></i>
+            </div>
+          </div>
+        </ion-scroll>
       </div>
 
       <div class="item padding description">
