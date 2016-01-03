@@ -12,6 +12,7 @@ function LoginCtrl($scope, $state, $cordovaOauth) {
       .facebook("486208661587668", ["email"])
       .then(function (result) {
         console.log(result);
+        $state.go('app.tabs.home');
       }, function (error) {
         console.log(error);
       });
