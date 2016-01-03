@@ -9103,7 +9103,8 @@ body {
   color: #ffffff !important; }
 
 .intro_view .intro_content ion-slide {
-  height: 100vh; }
+  height: 100vh;
+  padding: 10px; }
   .intro_view .intro_content ion-slide img {
     height: 100%; }
   .intro_view .intro_content ion-slide .slide_content {

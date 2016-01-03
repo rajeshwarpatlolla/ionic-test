@@ -50,7 +50,7 @@
         .getProductsDataFact()
         .then(function (response) {
           if (val === 'more') {
-            $scope.allProducts = response;
+            $scope.allProducts.concat(response);
           } else {
             $scope.allProducts = response;
           }
