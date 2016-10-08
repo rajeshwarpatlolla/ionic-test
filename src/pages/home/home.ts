@@ -15,7 +15,9 @@ export class HomePage {
     public actionsheetCtrl: ActionSheetController,
     public alerCtrl: AlertController,
     public modalCtrl: ModalController
-  ) { }
+  ) {
+    console.log('HomePage constructor');
+   }
 
   openMenu() {
     let actionSheet = this.actionsheetCtrl.create({
@@ -75,7 +77,7 @@ export class HomePage {
   }
 
   openModal() {
-    let modal = this.modalCtrl.create(ModalsContentPage);
+    let modal = this.modalCtrl.create(ModalPage);
     modal.present();
   }
 
@@ -83,14 +85,13 @@ export class HomePage {
 
 
 @Component({
-  template: 'modal-content.html'
+  templateUrl: 'modal-content.html'
 })
-export class ModalsContentPage {
+export class ModalPage {
 
-  constructor(
-      public params: NavParams,
-      public viewCtrl: ViewController
-  ) { }
+  constructor(public viewCtrl: ViewController) { 
+    console.log('ModalPage constructor');
+  }
 
   dismiss() {
     this.viewCtrl.dismiss();
