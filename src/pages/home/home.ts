@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { NavController, Platform, AlertController, ModalController, ViewController, NavParams } from 'ionic-angular';
+import { NavController, Platform, AlertController, ModalController, ViewController } from 'ionic-angular';
 
 
 @Component({
@@ -9,14 +9,12 @@ import { NavController, Platform, AlertController, ModalController, ViewControll
 })
 export class HomePage {
 
-  constructor(
-    public navCtrl: NavController,
-    public platform: Platform,
-    public alerCtrl: AlertController,
-    public modalCtrl: ModalController
-  ) {
+  constructor(public navCtrl:NavController,
+              public platform:Platform,
+              public alerCtrl:AlertController,
+              public modalCtrl:ModalController) {
     console.log('HomePage constructor');
-   }
+  }
 
   openAlert() {
     let alert = this.alerCtrl.create({
@@ -40,11 +38,15 @@ export class HomePage {
 })
 export class ModalPage {
 
-  constructor(public viewCtrl: ViewController) { 
+  constructor(public viewCtrl:ViewController) {
     console.log('ModalPage constructor');
   }
 
   dismiss() {
     this.viewCtrl.dismiss();
+  }
+
+  dateClicked() {
+    console.log('dateClicked');
   }
 }

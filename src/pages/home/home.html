@@ -6,15 +6,12 @@
 
 <ion-content padding>
   <h2>Welcome to Ionic!</h2>
-  <p>
-    This starter project comes with simple tabs-based layout for apps
-    that are going to primarily use a Tabbed UI.
-  </p>
-  <p>
-    Take a look at the <code>src/pages/</code> directory to add or change tabs,
-    update any existing page or create new pages.
-  </p>
-
   <button ion-button block (click)="openAlert()">Open Alert</button>
   <button ion-button block (click)="openModal()">Open Modal</button>
+
+  <ion-item>
+    <ion-label>Dual slider</ion-label>
+    <ion-range dualKnobs="true" [(ngModel)]="dualValue2" min="21" max="72" step="3" snaps="true"></ion-range>
+  </ion-item>
+
 </ion-content>
