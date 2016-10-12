@@ -8,12 +8,19 @@ import { NavController, Platform, AlertController, ModalController, ViewControll
   templateUrl: 'home.html'
 })
 export class HomePage {
-
-  constructor(public navCtrl:NavController,
+  name;
+  pages;
+  constructor(public navCtrl: NavController,
               public platform:Platform,
               public alerCtrl:AlertController,
               public modalCtrl:ModalController) {
     console.log('HomePage constructor');
+    this.name = 'abc';
+    this.pages = ['one', 'two'];
+  }
+
+  submitValue() {
+    console.log('this.name ', this.name);
   }
 
   openAlert() {

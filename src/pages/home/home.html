@@ -6,12 +6,18 @@
 
 <ion-content padding>
   <h2>Welcome to Ionic!</h2>
-  <button ion-button block (click)="openAlert()">Open Alert</button>
-  <button ion-button block (click)="openModal()">Open Modal</button>
 
-  <ion-item>
-    <ion-label>Dual slider</ion-label>
-    <ion-range dualKnobs="true" [(ngModel)]="dualValue2" min="21" max="72" step="3" snaps="true"></ion-range>
+  <ion-item padding>
+    <ion-label floating>Enter name</ion-label>
+    <ion-input type="text" [(ngModel)]="name"></ion-input>
+  </ion-item>
+  <ion-item padding>
+    <div [innerHTML]="name"></div>
   </ion-item>
 
+  <button ion-item *ngFor="let page of pages">{{page}}</button>
+
+  <button ion-button block (click)="submitValue()">Submit</button>
+  <button ion-button block (click)="openAlert()">Open Alert</button>
+  <button ion-button block (click)="openModal()">Open Modal</button>
 </ion-content>
