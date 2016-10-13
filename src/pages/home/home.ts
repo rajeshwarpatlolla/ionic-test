@@ -11,9 +11,9 @@ export class HomePage {
   name;
   pages;
   constructor(public navCtrl: NavController,
-              public platform:Platform,
-              public alerCtrl:AlertController,
-              public modalCtrl:ModalController) {
+    public platform: Platform,
+    public alerCtrl: AlertController,
+    public modalCtrl: ModalController) {
     console.log('HomePage constructor');
     this.name = 'abc';
     this.pages = ['one', 'two'];
@@ -44,16 +44,47 @@ export class HomePage {
   templateUrl: 'modal-content.html'
 })
 export class ModalPage {
+  dayList;
+  rows;
+  cols;
+  firstDay;
 
-  constructor(public viewCtrl:ViewController) {
+  constructor(public viewCtrl: ViewController) {
     console.log('ModalPage constructor');
+    this.dayList = [];
+    this.rows = [0, 7, 14, 21, 28, 35];
+    this.cols = [0, 1, 2, 3, 4, 5, 6];
+
+    let currentDate = new Date();
+    let firstDay = new Date(currentDate.getFullYear(), currentDate.getMonth(), 1).getDate();
+    let lastDay = new Date(currentDate.getFullYear(), currentDate.getMonth() + 1, 0).getDate();
+
+    for (let i = firstDay; i <= lastDay; i++) {
+      let tempDate = new Date(currentDate.getFullYear(), currentDate.getMonth(), i);
+
+      this.dayList.push({
+        date: tempDate.getDate(),
+        month: tempDate.getMonth(),
+        year: tempDate.getFullYear(),
+        day: tempDate.getDay(),
+        epoch: tempDate.getTime()
+      });
+    }
+
+    firstDay = this.dayList[0].day;
+
+    for (let j = 0; j < firstDay; j++) {
+      console.log('unshift', j);
+      this.dayList.unshift({});
+    }
+
   }
 
   dismiss() {
     this.viewCtrl.dismiss();
   }
 
-  dateClicked() {
-    console.log('dateClicked');
+  dateClicked(dateObj) {
+    console.log('dateClicked', dateObj);
   }
 }
