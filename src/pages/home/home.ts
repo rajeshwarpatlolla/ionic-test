@@ -44,6 +44,7 @@ export class HomePage {
   templateUrl: 'modal-content.html'
 })
 export class ModalPage {
+  weeks;
   dayList;
   rows;
   cols;
@@ -51,6 +52,7 @@ export class ModalPage {
 
   constructor(public viewCtrl: ViewController) {
     console.log('ModalPage constructor');
+    this.weeks = ['T','W','T','F','S','S','M'];
     this.dayList = [];
     this.rows = [0, 7, 14, 21, 28, 35];
     this.cols = [0, 1, 2, 3, 4, 5, 6];
@@ -74,7 +76,6 @@ export class ModalPage {
     firstDay = this.dayList[0].day;
 
     for (let j = 0; j < firstDay; j++) {
-      console.log('unshift', j);
       this.dayList.unshift({});
     }
 
