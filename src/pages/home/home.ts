@@ -49,9 +49,11 @@ export class ModalPage {
   rows;
   cols;
   firstDay;
+  selectedDate;
 
   constructor(public viewCtrl: ViewController) {
     console.log('ModalPage constructor');
+    this.selectedDate = new Date();
     this.weeks = ['T','W','T','F','S','S','M'];
     this.dayList = [];
     this.rows = [0, 7, 14, 21, 28, 35];
@@ -87,5 +89,19 @@ export class ModalPage {
 
   dateClicked(dateObj) {
     console.log('dateClicked', dateObj);
+    this.selectedDate = new Date(dateObj.epoch);
   }
+
+  refreshDateList(){
+
+  }
+  
+  prevMonth(){
+    console.log('prevMonth');
+  }
+
+  nextMonth(){
+    console.log('nextMonth');
+  }
+
 }

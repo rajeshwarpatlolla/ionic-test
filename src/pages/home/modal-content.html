@@ -1,7 +1,8 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      Description
+      <!-- <span [innerHTML]="selectedDate"></span> -->
+      {{ selectedDate | date:"MMM-dd-yyyy" }}
     </ion-title>
     <ion-buttons start>
       <button ion-button (click)="dismiss()">
@@ -15,11 +16,11 @@
   <ion-list>
     <ion-grid>
       <ion-row class="center">
-        <ion-col width-10>
+        <ion-col width-10 (click)="prevMonth()">
           <ion-icon ios="ios-arrow-back" md="md-arrow-back"></ion-icon>
         </ion-col>
         <ion-col width-80>Time</ion-col>
-        <ion-col width-10>
+        <ion-col width-10 (click)="nextMonth()">
           <ion-icon ios="ios-arrow-forward" md="md-arrow-forward"></ion-icon>
         </ion-col>
       </ion-row>
