@@ -3,7 +3,8 @@ import { IonicApp, IonicModule } from 'ionic-angular';
 import { MyApp } from './app.component';
 import { AboutPage } from '../pages/about/about';
 import { ContactPage } from '../pages/contact/contact';
-import { HomePage, ModalPage } from '../pages/home/home';
+import { HomePage } from '../pages/home/home';
+import { IonicDatepicker } from '../pages/ionic-datepicker/ionic-datepicker';
 import { TabsPage } from '../pages/tabs/tabs';
 
 @NgModule({
@@ -12,7 +13,7 @@ import { TabsPage } from '../pages/tabs/tabs';
     AboutPage,
     ContactPage,
     HomePage,
-    ModalPage,
+    IonicDatepicker,
     TabsPage
   ],
   imports: [
@@ -24,7 +25,7 @@ import { TabsPage } from '../pages/tabs/tabs';
     AboutPage,
     ContactPage,
     HomePage,
-    ModalPage,
+    IonicDatepicker,
     TabsPage
   ],
   providers: []
