@@ -12,7 +12,7 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content class="modal_content">
+<ion-content class="ionic_datepicker_modal_content">
   <ion-list>
     <ion-grid>
       <ion-row class="center">
@@ -25,7 +25,7 @@
         </ion-col>
       </ion-row>
       <ion-row class="center">
-        <ion-col width-10 *ngFor="let week of weeks" [innerHTML]="week"></ion-col>
+        <ion-col width-10 *ngFor="let week of weeks" [innerHTML]="week" class="font_bold"></ion-col>
       </ion-row>
       <ion-row class="center" *ngFor="let row of rows">
         <ion-col width-10 *ngFor="let col of cols">
