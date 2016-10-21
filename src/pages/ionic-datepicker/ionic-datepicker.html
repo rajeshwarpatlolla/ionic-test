@@ -19,7 +19,11 @@
         <ion-col width-10 (click)="prevMonth(daysList[daysList.length - 1])">
           <ion-icon ios="ios-arrow-back" md="md-arrow-back"></ion-icon>
         </ion-col>
-        <ion-col width-80 [innerHTML]="months[daysList[daysList.length - 1].month]"></ion-col>
+        <ion-col width-80>
+          <span [innerHTML]="months[daysList[daysList.length - 1].month]"></span>
+          <span> - </span>
+          <span [innerHTML]="daysList[daysList.length - 1].year"></span>
+        </ion-col>
         <ion-col width-10 (click)="nextMonth(daysList[daysList.length - 1])">
           <ion-icon ios="ios-arrow-forward" md="md-arrow-forward"></ion-icon>
         </ion-col>
