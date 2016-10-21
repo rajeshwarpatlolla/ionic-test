@@ -1,37 +1,39 @@
-import {Component} from '@angular/core';
-import {ViewController} from 'ionic-angular';
+import { Component } from '@angular/core';
+import { ViewController } from 'ionic-angular';
 
 @Component({
   templateUrl: 'ionic-datepicker.html'
 })
 export class IonicDatepicker {
   weeks;
-  dayList;
+  months;
+  daysList;
   rows;
   cols;
   firstDay;
   selectedDate;
 
-  constructor(public viewCtrl:ViewController) {
+  constructor(public viewCtrl: ViewController) {
     console.log('IonicDatepicker Constructor');
     this.selectedDate = new Date();
-    this.weeks = ['M','T', 'W', 'T', 'F', 'S', 'S'];
-    this.dayList = [];
+    this.weeks = ['S', 'M', 'T', 'W', 'T', 'F', 'S'];
+    this.months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
     this.rows = [0, 7, 14, 21, 28, 35];
     this.cols = [0, 1, 2, 3, 4, 5, 6];
-    
+
     let currentDate = new Date();
     this.loadDaysList(currentDate);
   }
 
   loadDaysList(ipDate) {
-  let firstDay = new Date(ipDate.getFullYear(), ipDate.getMonth(), 1).getDate();
+    this.daysList = [];
+    let firstDay = new Date(ipDate.getFullYear(), ipDate.getMonth(), 1).getDate();
     let lastDay = new Date(ipDate.getFullYear(), ipDate.getMonth() + 1, 0).getDate();
 
     for (let i = firstDay; i <= lastDay; i++) {
       let tempDate = new Date(ipDate.getFullYear(), ipDate.getMonth(), i);
 
-      this.dayList.push({
+      this.daysList.push({
         date: tempDate.getDate(),
         month: tempDate.getMonth(),
         year: tempDate.getFullYear(),
@@ -40,15 +42,16 @@ export class IonicDatepicker {
       });
     }
 
-    firstDay = this.dayList[0].day;
-    console.log('this.dayList', this.dayList);
-    
-    for (let j = 1; j < firstDay; j++) {
-      this.dayList.unshift({});
-    }
+    firstDay = this.daysList[0].day;
 
-  } 
-  
+    console.log('firstDay', firstDay);
+    
+    for (let j = 0; j < firstDay; j++) {
+      this.daysList.unshift({});
+    }
+    console.log('this.daysList', this.daysList);
+  }
+
   dismiss() {
     this.viewCtrl.dismiss();
   }
@@ -58,16 +61,16 @@ export class IonicDatepicker {
     this.selectedDate = new Date(dateObj.epoch);
   }
 
-  refreshDateList() {
-
+  prevMonth(dateObj) {
+    let date = new Date(dateObj.epoch);
+    date.setDate(date.getDate() - dateObj.date);
+    this.loadDaysList(new Date(date));
   }
 
-  prevMonth() {
-    console.log('prevMonth');
-  }
-
-  nextMonth() {
-    console.log('nextMonth');
+  nextMonth(dateObj) {
+    let date = new Date(dateObj.epoch)
+    date.setDate(date.getDate() + 1);
+    this.loadDaysList(new Date(date));
   }
 
 }

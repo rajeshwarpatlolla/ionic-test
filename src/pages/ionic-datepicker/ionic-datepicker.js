@@ -9,7 +9,7 @@ var core_1 = require('@angular/core');
 var IonicDatepicker = (function () {
     function IonicDatepicker(viewCtrl) {
         this.viewCtrl = viewCtrl;
-        console.log('IonicDatepicker Constructor');
+        console.log('IonicDatepickerg Constructor');
         this.selectedDate = new Date();
         this.weeks = ['M', 'T', 'W', 'T', 'F', 'S', 'S'];
         this.dayList = [];
