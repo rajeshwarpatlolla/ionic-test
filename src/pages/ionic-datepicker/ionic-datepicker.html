@@ -20,9 +20,27 @@
           <ion-icon ios="ios-arrow-back" md="md-arrow-back"></ion-icon>
         </ion-col>
         <ion-col width-80>
-          <span [innerHTML]="months[daysList[daysList.length - 1].month]"></span>
+          <!--<span [innerHTML]="months[daysList[daysList.length - 1].month]"></span>
           <span> - </span>
-          <span [innerHTML]="daysList[daysList.length - 1].year"></span>
+          <span [innerHTML]="daysList[daysList.length - 1].year"></span>-->
+          <ion-row class="center">
+            <ion-col width-50>
+              <ion-item>
+                <ion-label>Month</ion-label>
+                <ion-select [(ngModel)]="month">
+                  <ion-option value="month" *ngFor="let month of months" [innerHTML]="month"></ion-option>
+                </ion-select>
+              </ion-item>
+            </ion-col>
+            <ion-col width-50>
+              <ion-item>
+                <ion-label>Year</ion-label>
+                <ion-select [(ngModel)]="year">
+                  <ion-option value="snes">SNES</ion-option>
+                </ion-select>
+              </ion-item>
+            </ion-col>
+          </ion-row>
         </ion-col>
         <ion-col width-10 (click)="nextMonth(daysList[daysList.length - 1])">
           <ion-icon ios="ios-arrow-forward" md="md-arrow-forward"></ion-icon>
