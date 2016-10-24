@@ -27,16 +27,16 @@
             <ion-col width-50>
               <ion-item>
                 <ion-label>Month</ion-label>
-                <ion-select [(ngModel)]="month">
-                  <ion-option value="month" *ngFor="let month of months" [innerHTML]="month"></ion-option>
+                <ion-select [(ngModel)]="selectedMonth" (ionChange)="monthSelected($event,selectedMonth)">
+                  <ion-option [value]="month" *ngFor="let month of months" [innerHTML]="month"></ion-option>
                 </ion-select>
               </ion-item>
             </ion-col>
             <ion-col width-50>
               <ion-item>
                 <ion-label>Year</ion-label>
-                <ion-select [(ngModel)]="year">
-                  <ion-option value="snes">SNES</ion-option>
+                <ion-select [(ngModel)]="selectedYear" (ionChange)="yearSelected($event,selectedYear)">
+                  <ion-option [value]="year" *ngFor="let year of years" [innerHTML]="year"></ion-option>
                 </ion-select>
               </ion-item>
             </ion-col>
@@ -51,7 +51,8 @@
       </ion-row>
       <ion-row class="center" *ngFor="let row of rows">
         <ion-col width-10 *ngFor="let col of cols">
-          <span *ngIf="daysList[row + col]" [innerHTML]="daysList[row + col].date" (click)="dateClicked(daysList[row + col])"></span>
+          <span *ngIf="daysList[row + col]" [innerHTML]="daysList[row + col].date" (click)="dateClicked(daysList[row + col])"
+          [ngClass]="{today: (today.getTime() == daysList[row + col].epoch), selectedDate: (selectedDate.getTime() == daysList[row + col].epoch), dateCell: true}"></span>
         </ion-col>
       </ion-row>
     </ion-grid>
@@ -59,17 +60,17 @@
 </ion-content>
 <ion-footer>
   <ion-toolbar>
-    <ion-buttons start>
+    <ion-buttons start (click)="setDate()">
       <button ion-button color="royal">
         Set
       </button>
     </ion-buttons>
-    <ion-buttons center>
+    <ion-buttons center (click)="setToday()">
       <button ion-button color="royal">
         Today
       </button>
     </ion-buttons>
-    <ion-buttons end>
+    <ion-buttons end (click)="dismiss()">
       <button ion-button color="royal">
         Close
       </button>

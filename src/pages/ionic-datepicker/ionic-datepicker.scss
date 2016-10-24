@@ -6,5 +6,30 @@
   .font_bold {
     font-weight: bold;
   } 
-
+  .label-md{
+    display: none;
+  }
+  ion-select{
+    max-width: 100%;
+    width: 100%;
+  }
+  .select-md {
+    padding: 5px;
+  }
+  .hightLightDay{
+    color: #fff;
+    font-weight: bold;
+    border-radius: 2px;
+  }
+  .dateCell{
+    padding: 5px;
+  }
+  .today{
+    background-color: #888;
+    @extend .hightLightDay;
+  }
+  .selectedDate{
+    background-color: #387ef5;
+    @extend .hightLightDay;
+  }
 }
