@@ -33,7 +33,8 @@ export class HomePage {
   }
 
   openModal() {
-    let modal = this.modalCtrl.create(IonicDatepicker);
+    let options = { today: new Date(), disablePast: false, disableFuture: false };
+    let modal = this.modalCtrl.create(IonicDatepicker, { datepickerConfig: options });
     modal.present();
   }
 

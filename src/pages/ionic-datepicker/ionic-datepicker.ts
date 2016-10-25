@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ViewController } from 'ionic-angular';
+import { ViewController, NavParams } from 'ionic-angular';
 
 @Component({
   templateUrl: 'ionic-datepicker.html'
@@ -17,7 +17,7 @@ export class IonicDatepicker {
   selectedYear;
   today;
 
-  constructor(public viewCtrl: ViewController) {
+  constructor(public viewCtrl: ViewController,public params: NavParams) {
     console.log('IonicDatepicker Constructor');
     this.selectedDate = new Date();
     this.weeks = ['S', 'M', 'T', 'W', 'T', 'F', 'S'];
@@ -30,6 +30,7 @@ export class IonicDatepicker {
     this.selectedMonth = this.months[currentDate.getMonth()];
     this.selectedYear = currentDate.getFullYear();
     this.loadDaysList(currentDate);
+    console.log(this.params.data.datepickerConfig);
   }
 
   resetHMSM(currentDate) {
@@ -41,6 +42,7 @@ export class IonicDatepicker {
   }
 
   getYearsList() {
+    console.log('getYearsList');
     let yearsList = [];
     for (let year = 1900; year <= 2100; year++) {
       yearsList.push(year);
