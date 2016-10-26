@@ -16,6 +16,7 @@ export class IonicDatepicker {
   selectedMonth;
   selectedYear;
   today;
+  config;
 
   constructor(public viewCtrl: ViewController,public params: NavParams) {
     console.log('IonicDatepicker Constructor');
@@ -30,7 +31,9 @@ export class IonicDatepicker {
     this.selectedMonth = this.months[currentDate.getMonth()];
     this.selectedYear = currentDate.getFullYear();
     this.loadDaysList(currentDate);
-    console.log(this.params.data.datepickerConfig);
+    this.config = this.params.data.datepickerConfig;
+    // this.config.from =
+    console.log('this.config', this.config);
   }
 
   resetHMSM(currentDate) {
