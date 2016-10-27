@@ -33,7 +33,7 @@ export class HomePage {
   }
 
   openModal() {
-    let options = { today: new Date(), from: new Date(), to: '22/2/2019' };
+    let options = { today: new Date(), fromDate: new Date(), toDate: '12/2/2016', disabledDates:['11/29/2016','11/21/2016','11/29/2016','11/18/2016','11/20/2016',] };
     let modal = this.modalCtrl.create(IonicDatepicker, { datepickerConfig: options });
     modal.present();
   }

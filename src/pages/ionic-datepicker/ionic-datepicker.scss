@@ -19,20 +19,22 @@
   .select-md {
     padding: 5px;
   }
-  .hightLightDay{
+  .date_cell{
+    padding: 5px;
+  }
+  .disabled_day{
+    pointer-events: none;
+    color: #aaa;
+  }
+  .today{
+    border: 1px solid #387ef5;
+    border-radius: 2px;
+    color: #000;
+  }
+  .selected_date{
     color: #fff;
     font-weight: bold;
     border-radius: 2px;
-  }
-  .dateCell{
-    padding: 5px;
-  }
-  .today{
-    background-color: #888;
-    @extend .hightLightDay;
-  }
-  .selectedDate{
     background-color: #387ef5;
-    @extend .hightLightDay;
   }
 }

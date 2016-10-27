@@ -18,7 +18,7 @@ export class IonicDatepicker {
   today;
   config;
 
-  constructor(public viewCtrl: ViewController,public params: NavParams) {
+  constructor(public viewCtrl: ViewController, public params: NavParams) {
     console.log('IonicDatepicker Constructor');
     this.selectedDate = new Date();
     this.weeks = ['S', 'M', 'T', 'W', 'T', 'F', 'S'];
@@ -26,16 +26,27 @@ export class IonicDatepicker {
     this.years = this.getYearsList();
     this.rows = [0, 7, 14, 21, 28, 35];
     this.cols = [0, 1, 2, 3, 4, 5, 6];
+
+    this.config = this.params.data.datepickerConfig || {};
+    this.config.fromDate = this.config.fromDate ? this.resetHMSM(new Date(this.config.fromDate)) : null;
+    this.config.toDate = this.config.toDate ? this.resetHMSM(new Date(this.config.toDate)) : null;
+    this.config.disabledDates = this.config.disabledDates ? this.prepareDisabledDates(this.config.disabledDates) : [];
+    console.log('this.config', this.config);
+    
     this.today = this.resetHMSM(new Date());
     let currentDate = new Date();
     this.selectedMonth = this.months[currentDate.getMonth()];
     this.selectedYear = currentDate.getFullYear();
     this.loadDaysList(currentDate);
-    this.config = this.params.data.datepickerConfig;
-    // this.config.from =
-    console.log('this.config', this.config);
   }
 
+  prepareDisabledDates(disbaledDates) {
+    disbaledDates.forEach(disbaledDate => {
+      disbaledDate = this.resetHMSM(new Date(disbaledDate));
+    });
+    return disbaledDates;
+  } 
+  
   resetHMSM(currentDate) {
     currentDate.setHours(0);
     currentDate.setMinutes(0);
@@ -45,7 +56,6 @@ export class IonicDatepicker {
   }
 
   getYearsList() {
-    console.log('getYearsList');
     let yearsList = [];
     for (let year = 1900; year <= 2100; year++) {
       yearsList.push(year);
@@ -57,7 +67,7 @@ export class IonicDatepicker {
     this.daysList = [];
     let firstDay = new Date(ipDate.getFullYear(), ipDate.getMonth(), 1).getDate();
     let lastDay = new Date(ipDate.getFullYear(), ipDate.getMonth() + 1, 0).getDate();
-
+    
     for (let i = firstDay; i <= lastDay; i++) {
       let tempDate = new Date(ipDate.getFullYear(), ipDate.getMonth(), i);
 
@@ -66,7 +76,8 @@ export class IonicDatepicker {
         month: tempDate.getMonth(),
         year: tempDate.getFullYear(),
         day: tempDate.getDay(),
-        epoch: tempDate.getTime()
+        epoch: tempDate.getTime(),
+        enabled: ((this.config.fromDate && this.config.toDate) ? (this.config.fromDate.getTime() <= tempDate.getTime() && this.config.toDate.getTime() >= tempDate.getTime()) : ((this.config.fromDate && !this.config.toDate) ? (this.config.fromDate.getTime() <= tempDate.getTime()) : this.config.toDate.getTime() >= tempDate.getTime()))
       });
     }
 
@@ -75,6 +86,7 @@ export class IonicDatepicker {
     for (let j = 0; j < firstDay; j++) {
       this.daysList.unshift({});
     }
+    console.log('this.daysList', this.daysList);
   }
 
   monthSelected(event, selectedMonth) {
