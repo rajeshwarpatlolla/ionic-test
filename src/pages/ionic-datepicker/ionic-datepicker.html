@@ -11,7 +11,7 @@
 	<ion-list>
 		<ion-grid>
 			<ion-row class="center">
-				<ion-col width-10 (click)="prevMonth(daysList[daysList.length - 1])">
+				<ion-col width-10 (click)="prevMonth(daysList[daysList.length - 1])" [ngClass]="{disabled: (true)}">
 					<ion-icon ios="ios-arrow-back" md="md-arrow-back"></ion-icon>
 				</ion-col>
 				<ion-col width-80>
@@ -37,7 +37,7 @@
 						</ion-col>
 					</ion-row>
 				</ion-col>
-				<ion-col width-10 (click)="nextMonth(daysList[daysList.length - 1])">
+				<ion-col width-10 (click)="nextMonth(daysList[daysList.length - 1])" [ngClass]="{disabled: (true)}">
 					<ion-icon ios="ios-arrow-forward" md="md-arrow-forward"></ion-icon>
 				</ion-col>
 			</ion-row>
@@ -46,7 +46,7 @@
 			</ion-row>
 			<ion-row class="center" *ngFor="let row of rows">
 				<ion-col width-10 *ngFor="let col of cols">
-					<span *ngIf="daysList[row + col]" class="date_cell" [innerHTML]="daysList[row + col].date" (click)="dateClicked(daysList[row + col])" [ngClass]="{today: (today.getTime() == daysList[row + col].epoch), selected_date: (selectedDate.getTime() == daysList[row + col].epoch), disabled_day: (!daysList[row + col].enabled)}"></span>
+					<span *ngIf="daysList[row + col]" class="date_cell" [innerHTML]="daysList[row + col].date" (click)="dateClicked(daysList[row + col])" [ngClass]="{today: (today.getTime() == daysList[row + col].epoch), selected_date: (selectedDate.getTime() == daysList[row + col].epoch), disabled: (!daysList[row + col].enabled)}"></span>
 				</ion-col>
 			</ion-row>
 		</ion-grid>
