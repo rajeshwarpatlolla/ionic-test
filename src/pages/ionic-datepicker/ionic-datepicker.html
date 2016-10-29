@@ -11,7 +11,7 @@
 	<ion-list>
 		<ion-grid>
 			<ion-row class="center">
-				<ion-col width-10 (click)="prevMonth(daysList[daysList.length - 1])" [ngClass]="{disabled: (true)}">
+				<ion-col width-10 (click)="prevMonth(daysList[daysList.length - 1])" [ngClass]="{disabled: (prevDisabled)}">
 					<ion-icon ios="ios-arrow-back" md="md-arrow-back"></ion-icon>
 				</ion-col>
 				<ion-col width-80>
@@ -37,7 +37,7 @@
 						</ion-col>
 					</ion-row>
 				</ion-col>
-				<ion-col width-10 (click)="nextMonth(daysList[daysList.length - 1])" [ngClass]="{disabled: (true)}">
+				<ion-col width-10 (click)="nextMonth(daysList[daysList.length - 1])" [ngClass]="{disabled: (nextDisabled)}">
 					<ion-icon ios="ios-arrow-forward" md="md-arrow-forward"></ion-icon>
 				</ion-col>
 			</ion-row>
