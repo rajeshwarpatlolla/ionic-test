@@ -41,8 +41,8 @@ export class IonicDatepicker {
   }
 
   prepareDisabledDates(disbaledDates) {
-    disbaledDates.forEach(disbaledDate => {
-      disbaledDate = this.resetHMSM(new Date(disbaledDate));
+    disbaledDates.forEach((disbaledDate,i )=> {
+      disbaledDates[i] = this.resetHMSM(new Date(disbaledDate)).getTime();
     });
     return disbaledDates;
   }
@@ -76,7 +76,7 @@ export class IonicDatepicker {
       if (i === lastDay) {
         this.nextDisabled = tempDate.getTime() > this.config.toDate.getTime();
       }
-
+// this.config.disabledDates
       this.daysList.push({
         date: tempDate.getDate(),
         month: tempDate.getMonth(),
