@@ -76,14 +76,16 @@ export class IonicDatepicker {
       if (i === lastDay) {
         this.nextDisabled = tempDate.getTime() > this.config.toDate.getTime();
       }
-// this.config.disabledDates
+ 
+      let isEnabled = ((this.config.fromDate && this.config.toDate) ? (this.config.fromDate.getTime() <= tempDate.getTime() && this.config.toDate.getTime() >= tempDate.getTime()) : ((this.config.fromDate && !this.config.toDate) ? (this.config.fromDate.getTime() <= tempDate.getTime()) : this.config.toDate.getTime() >= tempDate.getTime())) && (this.config.disabledDates.indexOf(tempDate.getTime()) < 0);
+      
       this.daysList.push({
         date: tempDate.getDate(),
         month: tempDate.getMonth(),
         year: tempDate.getFullYear(),
         day: tempDate.getDay(),
         epoch: tempDate.getTime(),
-        enabled: ((this.config.fromDate && this.config.toDate) ? (this.config.fromDate.getTime() <= tempDate.getTime() && this.config.toDate.getTime() >= tempDate.getTime()) : ((this.config.fromDate && !this.config.toDate) ? (this.config.fromDate.getTime() <= tempDate.getTime()) : this.config.toDate.getTime() >= tempDate.getTime()))
+        enabled: isEnabled
       });
     }
 
