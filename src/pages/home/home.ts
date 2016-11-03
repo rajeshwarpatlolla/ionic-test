@@ -33,7 +33,22 @@ export class HomePage {
   }
 
   openModal() {
-    let options = { today: new Date(), fromDate: new Date(), toDate: '12/2/2016', disabledDates:['11/29/2016','11/21/2016','11/2/2016','11/18/2016','11/20/2016',] };
+    let options = { 
+      inputDate: new Date(), 
+      fromDate: new Date(), 
+      toDate: '12/2/2016', 
+      disabledDates: ['11/29/2016', '11/21/2016', '11/2/2016', '11/18/2016', '11/20/2016'],
+      setLabel: 'Set',
+      todayLabel: 'Today',
+      closeLabel: 'Close',
+      mondayFirst: false,
+      weeksList: ["S", "M", "T", "W", "T", "F", "S"],
+      monthsList: ["Jan", "Feb", "March", "April", "May", "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec"],
+      dateFormat: 'dd MMMM yyyy',
+      showTodayButton: true,
+      closeOnSelect: false
+    };
+
     let modal = this.modalCtrl.create(IonicDatepicker, { datepickerConfig: options });
     modal.present();
   }
