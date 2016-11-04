@@ -29,9 +29,13 @@ export class IonicDatepicker {
     this.cols = [0, 1, 2, 3, 4, 5, 6];
 
     this.config = this.params.data.datepickerConfig || {};
+    this.config.inputDate = this.config.inputDate ? this.config.inputDate : new Date();
     this.config.fromDate = this.config.fromDate ? this.resetHMSM(new Date(this.config.fromDate)) : null;
     this.config.toDate = this.config.toDate ? this.resetHMSM(new Date(this.config.toDate)) : null;
     this.config.disabledDates = this.config.disabledDates ? this.prepareDisabledDates(this.config.disabledDates) : [];
+    this.config.setLabel = this.config.setLabel ? this.config.setLabel : 'Set';
+    this.config.todayLabel = this.config.todayLabel ? this.config.todayLabel : 'Set';
+    this.config.closeLabel = this.config.closeLabel ? this.config.closeLabel : 'Set';
 
     this.today = this.resetHMSM(new Date());
     let currentDate = new Date();
