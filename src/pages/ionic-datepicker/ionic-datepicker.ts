@@ -21,9 +21,9 @@ export class IonicDatepicker {
   nextDisabled;
 
   constructor(public viewCtrl: ViewController, public params: NavParams) {
+    let weeks = ['S', 'M', 'T', 'W', 'T', 'F', 'S'];
+    let months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
     this.selectedDate = new Date();
-    this.weeks = ['S', 'M', 'T', 'W', 'T', 'F', 'S'];
-    this.months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
     this.years = this.getYearsList();
     this.rows = [0, 7, 14, 21, 28, 35];
     this.cols = [0, 1, 2, 3, 4, 5, 6];
@@ -36,6 +36,10 @@ export class IonicDatepicker {
     this.config.setLabel = this.config.setLabel ? this.config.setLabel : 'Set';
     this.config.todayLabel = this.config.todayLabel ? this.config.todayLabel : 'Set';
     this.config.closeLabel = this.config.closeLabel ? this.config.closeLabel : 'Set';
+    this.config.mondayFirst = this.config.mondayFirst ? this.config.mondayFirst : false;
+    this.config.weeksList = this.config.weeksList ? this.config.weeksList : weeks;
+    this.config.monthsList = this.config.monthsList ? this.config.monthsList : months;
+    this.config.dateFormat = this.config.dateFormat ? this.config.dateFormat : 'dd MMMM yyyy';
 
     this.today = this.resetHMSM(new Date());
     let currentDate = new Date();

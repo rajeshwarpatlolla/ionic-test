@@ -23,7 +23,7 @@
 							<ion-item>
 								<ion-label>Month</ion-label>
 								<ion-select [(ngModel)]="selectedMonth" (ionChange)="monthSelected($event,selectedMonth)">
-									<ion-option [value]="month" *ngFor="let month of months" [innerHTML]="month"></ion-option>
+									<ion-option [value]="month" *ngFor="let month of monthsList" [innerHTML]="month"></ion-option>
 								</ion-select>
 							</ion-item>
 						</ion-col>
@@ -42,7 +42,7 @@
 				</ion-col>
 			</ion-row>
 			<ion-row class="center">
-				<ion-col width-10 *ngFor="let week of weeks" [innerHTML]="week" class="font_bold"></ion-col>
+				<ion-col width-10 *ngFor="let week of weeksList" [innerHTML]="week" class="font_bold"></ion-col>
 			</ion-row>
 			<ion-row class="center" *ngFor="let row of rows">
 				<ion-col width-10 *ngFor="let col of cols">
