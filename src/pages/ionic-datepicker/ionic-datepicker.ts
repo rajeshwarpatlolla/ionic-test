@@ -21,25 +21,27 @@ export class IonicDatepicker {
   nextDisabled;
 
   constructor(public viewCtrl: ViewController, public params: NavParams) {
-    let weeks = ['S', 'M', 'T', 'W', 'T', 'F', 'S'];
-    let months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
     this.selectedDate = new Date();
+    this.weeks = ['S', 'M', 'T', 'W', 'T', 'F', 'S'];
+    this.months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
     this.years = this.getYearsList();
     this.rows = [0, 7, 14, 21, 28, 35];
     this.cols = [0, 1, 2, 3, 4, 5, 6];
 
     this.config = this.params.data.datepickerConfig || {};
-    this.config.inputDate = this.config.inputDate ? this.config.inputDate : new Date();
+    this.config.inputDate = this.config.inputDate ? this.resetHMSM(new Date(this.config.inputDate)) : this.resetHMSM(new Date());
     this.config.fromDate = this.config.fromDate ? this.resetHMSM(new Date(this.config.fromDate)) : null;
     this.config.toDate = this.config.toDate ? this.resetHMSM(new Date(this.config.toDate)) : null;
     this.config.disabledDates = this.config.disabledDates ? this.prepareDisabledDates(this.config.disabledDates) : [];
     this.config.setLabel = this.config.setLabel ? this.config.setLabel : 'Set';
-    this.config.todayLabel = this.config.todayLabel ? this.config.todayLabel : 'Set';
-    this.config.closeLabel = this.config.closeLabel ? this.config.closeLabel : 'Set';
+    this.config.todayLabel = this.config.todayLabel ? this.config.todayLabel : 'Today';
+    this.config.closeLabel = this.config.closeLabel ? this.config.closeLabel : 'Close';
     this.config.mondayFirst = this.config.mondayFirst ? this.config.mondayFirst : false;
-    this.config.weeksList = this.config.weeksList ? this.config.weeksList : weeks;
-    this.config.monthsList = this.config.monthsList ? this.config.monthsList : months;
+    this.config.weeksList = this.config.weeksList ? this.config.weeksList : this.weeks;
+    this.config.monthsList = this.config.monthsList ? this.config.monthsList : this.months;
     this.config.dateFormat = this.config.dateFormat ? this.config.dateFormat : 'dd MMMM yyyy';
+    this.config.showTodayButton = this.config.showTodayButton ? this.config.showTodayButton : true;
+    this.config.closeOnSelect = this.config.closeOnSelect ? this.config.closeOnSelect : false;
 
     this.today = this.resetHMSM(new Date());
     let currentDate = new Date();
