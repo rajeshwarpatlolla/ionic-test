@@ -8,18 +8,15 @@ let config = {
   entry: {
     'src/pages/ionic-datepicker': [
     ],
-
     // Auto-detect all pages in directory.
-    'myPages': glob.sync('./path/to/**/*.js'),
+    'myPages': glob.sync('./src/pages/ionic-datepicker/**/*.js'),
   },
   module: {
     loaders: [
-      // CSS: scss, css
       {
         test: /\.s?css$/,
         loaders: ['style', 'css', 'sass', 'postcss-loader']
       },
-      // HTML: htm, html
       {
         test: /\.html?$/,
         loader: "file?name=[name].[ext]"
