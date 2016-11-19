@@ -1,42 +1,21 @@
-'use strict';
-
-const webpack = require('webpack'),
-  	 glob = require('glob');
-
-
-let config = {
-  entry: {
-    'src/pages/ionic-datepicker': [
-    ],
-    // Auto-detect all pages in directory.
-    'myPages': glob.sync('./src/pages/ionic-datepicker/**/*.js'),
-  },
+module.exports = {
+  entry:  './src/pages/ionic-datepicker',
+  output: {
+    path: 'build',
+      filename: 'bundle.js',
+    },
   module: {
     loaders: [
       {
-        test: /\.s?css$/,
-        loaders: ['style', 'css', 'sass', 'postcss-loader']
+        test: /\.js/,
+        loader: 'babel',
+        include: __dirname + '/src',
       },
       {
-        test: /\.html?$/,
-        loader: "file?name=[name].[ext]"
+        test: /\.css/,
+        loaders: ['style', 'css'],
+        include: __dirname + '/src'
       }
-    ]
-  },
-  output: {
-    path: './dist',
-    filename: 'bundle--[name].js'
-  },
-  plugins: [
-    // Pro-tip: Order matters here.
-    new webpack.optimize.CommonsChunkPlugin([‘myPages’, 'vendor'], 'bundle--[name].js'),
-    // Minify assets.
-    new webpack.optimize.UglifyJsPlugin({
-      compress: {
-        warnings: false 
-      }
-    })
-  ]
+    ],
+  }
 };
-
-module.exports = config;
