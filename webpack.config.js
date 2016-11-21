@@ -12,8 +12,8 @@ module.exports = {
         include: __dirname + './src/pages/ionic-datepicker',
       },
       {
-        test: /\.html?$/,
-        loader: "file?name=[name].[ext]",
+        test: /\.html/,
+        loaders: ['html'],
         include: __dirname + './src/pages/ionic-datepicker'
       },
       {
