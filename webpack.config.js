@@ -1,26 +1,17 @@
 module.exports = {
-  entry: './src/pages/ionic-datepicker',
+  entry: [
+    './src/pages/ionic-datepicker/ionic-datepicker.js',
+    './src/pages/ionic-datepicker/ionic-datepicker.html',
+    './src/pages/ionic-datepicker/ionic-datepicker.scss'
+  ],
   output: {
-    path: 'build',
+    path: __dirname + '/dist',
     filename: 'bundle.js',
   },
   module: {
-    loaders: [
-      {
-        test: /\.js/,
-        loader: 'babel',
-        include: __dirname + './src/pages/ionic-datepicker',
-      },
-      {
-        test: /\.html/,
-        loaders: ['html'],
-        include: __dirname + './src/pages/ionic-datepicker'
-      },
-      {
-        test: /\.css/,
-        loaders: ['style', 'css'],
-        include: __dirname + './src/pages/ionic-datepicker'
-      }
-    ],
-  }
+        loaders: [
+          { test: /\.css$/, loader: "style!css" },
+          { test: /\.html$/, loader: "html!html" }
+        ]
+    }
 };
