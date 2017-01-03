@@ -36,7 +36,7 @@ export class HomePage {
     let options = { 
       inputDate: new Date(), 
       fromDate: new Date(), 
-      toDate: '12/2/2016', 
+      toDate: '4/24/2017',
       disabledDates: ['11/29/2016', '11/21/2016', '11/2/2016', '11/18/2016', '11/20/2016'],
       setLabel: 'Set',
       todayLabel: 'Today',
